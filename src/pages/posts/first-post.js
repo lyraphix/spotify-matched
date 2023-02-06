@@ -19,10 +19,8 @@ export default function FirstPost() {
           <name1 className={styles.header}>{"Login"}</name1>
         
           <Spacer y={4} />
-          <input type="text" 
-            placeholder="Enter Username" required />
-          <input type="password" 
-            placeholder="Enter Password" required />
+          <Input placeholder = "Email" />
+          <Input placeholder = "Password" />
           <Spacer y={1} />
           <Button onClick={open}>Login</Button>
           <h1 className={styles.text}>
