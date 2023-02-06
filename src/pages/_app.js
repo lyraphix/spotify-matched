@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+// import '@/styles/globals.css'
 import { createTheme, ThemeProvider } from '@mui/material';
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
@@ -32,12 +32,12 @@ export default function App({ Component, pageProps }) {
     typography: {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 100,
+        fontWeight: 200,
         fontSize: '2.5rem',
       },
       h2: {
         fontSize: '2.5rem',
-        fontWeight: 10,
+        fontWeight: 150,
         fontStretch: "condensed",
         fontFamily: "cursive",
       },
@@ -46,6 +46,7 @@ export default function App({ Component, pageProps }) {
         fontSize: '1rem',
       },
     },
+    
   });
   return <ThemeProvider theme={theme}><Component {...pageProps} /></ThemeProvider>
 }

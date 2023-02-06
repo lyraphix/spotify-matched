@@ -16,7 +16,7 @@ export default function Home() {
   }
   return (
     <Container>
-      {/* <CssBaseline />    */}
+      <CssBaseline />   
       <Grid Container spacing = {2}>
       <Box
             sx={{
