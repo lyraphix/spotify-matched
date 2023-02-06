@@ -18,7 +18,7 @@ export default function Home() {
           <div>
             <name1 className={styles.header}>{"Spotify"}</name1>
             <name2 className={styles.header2}>{"MATCHED"}</name2>
-            <a
+            {/* <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function Home() {
                 height={24}
                 priority
               />
-            </a>
+            </a> */}
           </div>
         </div>
         <login>
