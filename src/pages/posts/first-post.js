@@ -18,7 +18,7 @@ export default function FirstPost() {
   return (
     // <ThemeProvider>
           <Container component="main" maxWidth="xs">
-          <CssBaseline />        
+          {/* <CssBaseline />         */}
           <Box
             sx={{
               marginTop: 20,
@@ -81,6 +81,13 @@ export default function FirstPost() {
                   </Link></Typography>
                 </Grid>
               </Grid>
+              <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                // backgroundColor: 'primary.light',
+              }}></Box>
             </Box>
           </Box>
           </Container>
