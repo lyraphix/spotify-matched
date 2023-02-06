@@ -1,25 +1,23 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import { Button } from "@nextui-org/react";
 import styles from '@/styles/Home.module.css'
+// import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  function Header({ title }) {
-    return <h1 className={styles.header}>{title ? title : "Default title"}</h1>
-  }
   function open({link}) {
     return window.open("/posts/first-post")
   }
   return (
-
-
       <main className={styles.main}>
         <div className={styles.description}>
           <div>
-            <Header title="Spotify Match" />
+            <name1 className={styles.header}>{"Spotify"}</name1>
+            <name2 className={styles.header2}>{"MATCHED"}</name2>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
@@ -37,12 +35,13 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <login>
 
-        <div>
-          Read Our first page!
-          
-          <button onClick={open}>First Page</button>
-        </div>
+        </login>
+
+        <login>
+          <Button onClick={open}>Login</Button>
+        </login>
         
 
         <div className={styles.center}>

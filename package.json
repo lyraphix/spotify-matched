@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "formik": "^2.2.9",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 }
-
-
