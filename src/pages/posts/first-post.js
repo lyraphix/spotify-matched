@@ -1,8 +1,14 @@
 // import Link from 'next/link';
 // import styles from '@/styles/Home.module.css'
 // import { Card, Row, Text, Input, Spacer, Button } from "@nextui-org/react";
-import { Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
+import { AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
 import { Card } from "@nextui-org/react";
+
+// const inter = Inter({ subsets: ['latin'] })
+//  const signedIn = false;
+//  const username = "";
+//  const avatar = "";
+
 
 // const mongoose = require('mongoose');
 //  const User = require('.models/user'); 
@@ -77,16 +83,16 @@ export default function FirstPost() {
     },
     
   });
-  function login() {
-    return (
-      <login>
-        inputs = {{}}
-      </login>
-    )
-  }
-  function open({link}) {
-    return window.open("/posts/first-post")
-  }
+  // function login() {
+  //   return (
+  //     <login>
+  //       inputs = {{}}
+  //     </login>
+  //   )
+  // }
+  // function open({link}) {
+  //   return window.open("/posts/first-post")
+  // }
   return (
     <ThemeProvider theme={theme}>
           <Container component="main" maxWidth="xs">

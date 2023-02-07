@@ -16,75 +16,56 @@ export default function Home() {
   }
   return (
     <Container>
-      <CssBaseline />   
-      <Grid Container spacing = {2}>
-      <Box
-            sx={{
-              margin: 8,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              
-              // backgroundColor: 'primary.light',
-            }}>
-          {/* <Grid item xs={2}> */}
-            <Box sx={{
-              margin: 10,
-              display: 'flex',
-              flexDirection: 'row',
-            }}>
-              
-              <Typography variant='h1'>
-                Spotify
-              </Typography>
-              <Typography variant='h2'>
-                MATCHED
-              </Typography>
-              <></>
-            </Box>
+       <CssBaseline />   
+            <Box >
+               <AppBar position="static">
+                 <Toolbar>
+                   {/* <Box sx={
+                       {alignItems: 'left',
+                       display: 'flex',
+                       flexDirection: 'row'}
+                     }> */}
 
-          {/* </Grid> */}
-          {/* <div> */}
-            {/* <name1 className={styles.header}>{"Spotify"}</name1>
-            <name2 className={styles.header2}>{"MATCHED"}</name2> */}
-            {/* <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a> */}
-          {/* </div> */}
-          {/* <></> */}
-        
-        <Box item xs={12} sm={6} sx={
-          {alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'row',}
-        }>
-        <Button
-            variant="contained"
-            size = "medium"
-            sx={{ mt: 15, mb: 10 }}
-            href="/posts/first-post"
-        >
-            Sign Up
-        </Button>
-        </Box>
-        <div>
-          SPOTIFY MAAAAATCHED!!!
-        </div>
-        
-      </Box>
-      </Grid>
-    </Container>
+                         <Typography variant='h1' sx={{ ml: 2}}>
+                           Spotify
+                         </Typography>
+                         <Typography variant='h2' sx={{ flexGrow: 11 }}>
+                           MATCHED
+                         </Typography>
+                   {/* </Box> */}
+                         <Button
+                               variant="text"
+                               size = "medium"
+                               sx={{ flexGrow: 1 }}
+                               href="/posts/first-post"
+                           >
+                               Login
+                         </Button>
+                         <Button
+                               variant="contained"
+                               size = "medium"
+                               href="/posts/first-post"
+                           >
+                               Sign Up
+                         </Button>
+
+                 </Toolbar>
+               </AppBar>
+         </Box>
+         <Box
+             sx={{
+               margin: 8,
+               display: 'flex',
+               flexDirection: 'column',
+               alignItems: 'center',
+
+               // backgroundColor: 'primary.light',
+             }}>
+         <div>
+           SPOTIFY MAAAAATCHED!!!
+         </div>
+
+       </Box>
+       </Container>
   )
 }

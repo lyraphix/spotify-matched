@@ -8,7 +8,7 @@
 //    },
 //    passwordkey: {
 //      type: String,
-//      reqiored: true
+//      required: true
 //    } 
 //  }, {timestamps: true})
 
