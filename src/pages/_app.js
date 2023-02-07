@@ -33,10 +33,10 @@ export default function App({ Component, pageProps }) {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
         fontWeight: 200,
-        fontSize: '2rem',
+        fontSize: '2.5rem',
       },
       h2: {
-        fontSize: '2rem',
+        fontSize: '2.5rem',
         fontWeight: 150,
         fontStretch: "condensed",
         fontFamily: "cursive",
