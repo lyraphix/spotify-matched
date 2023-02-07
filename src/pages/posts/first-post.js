@@ -3,36 +3,8 @@
 // import { Card, Row, Text, Input, Spacer, Button } from "@nextui-org/react";
 import { Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
 import { Card } from "@nextui-org/react";
-    
+
 export default function FirstPost() {
-  // const mongoose = require('mongoose');
-  // const User = require('.models/user'); 
-
-  // const db = 'mongodb+srv://data:data8bits@cluster0.4fmz5wr.mongodb.net/?retryWrites=true&w=majority';
-  // mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology:true})
-  //   .then((result) => console.log('connected to db'))
-  //   .catch((err) => console.log(err));
-
-  // function signup() {
-  //   const user_name = document.getElementById('email');
-  //   const password_unhashed = document.getElementById('password');
-  
-  //   app.get('/add-user', (req,res) => {
-  //     const user = new User({
-  //       username: user_name,
-  //       passwordkey: password_unhashed
-  //     });
-    
-  //     user.save()
-  //     .then((result) => {
-  //         res.send(result)
-  //     })
-  //     .catch((err) => {
-  //       HTMLFormControlsCollection.log(err);
-  //     });
-  //   })
-  // }
-
   const theme = createTheme({
     palette: {
       mode: 'light',
@@ -171,7 +143,6 @@ export default function FirstPost() {
                 </Grid>
               </Grid>
               <Button
-                // onclick={signup()}
                 type="submit"
                 fullWidth
                 variant="contained"
