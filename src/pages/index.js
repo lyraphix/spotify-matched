@@ -19,42 +19,30 @@ export default function Home() {
       <CssBaseline />  
       <Box >
                <AppBar position="static">
-                 <Toolbar>
-      {/* <Box
-            sx={{
-              margin: 8,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              
-              // backgroundColor: 'primary.light',
-            }}> */}
-          {/* <Grid item xs={2}> */}
-            {/* <Box sx={{
-              margin: 10,
-              display: 'flex',
-              flexDirection: 'row',
-            }}> */}
-              
-              <Typography variant='h1'>
-                Spotify
-              </Typography>
-              <Typography variant='h2'>
-                MATCHED
-              </Typography>
-              <></>
-            {/* </Box> */}
-
-        
-        <Button
-            variant="contained"
-            size = "medium"
-            sx={{ mt: 15, mb: 10 }}
-            href="/posts/first-post"
-        >
-            Sign Up
-        </Button>
-        </Toolbar>
+                  <Toolbar>
+                         <Typography variant='h1' sx={{ ml: 2}}>
+                           Spotify
+                         </Typography>
+                         <Typography variant='h2' sx={{ flexGrow: 11 }}>
+                           MATCHED
+                         </Typography>
+                   {/* </Box> */}
+                         <Button
+                               variant="text"
+                               size = "medium"
+                               sx={{ flexGrow: 1 }}
+                               href="/posts/first-post"
+                           >
+                               Login
+                         </Button>
+                         <Button
+                               variant="contained"
+                               size = "medium"
+                               href="/posts/first-post"
+                           >
+                               Sign Up
+                         </Button>
+                  </Toolbar>
                </AppBar>
          </Box>
         <Box
@@ -70,8 +58,6 @@ export default function Home() {
           SPOTIFY MAAAAATCHED!!!
         </div>
         </Box>
-      {/* </Box> */}
-      {/* </Grid> */}
     </Container>
   )
 }
