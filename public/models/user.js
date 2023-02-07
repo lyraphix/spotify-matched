@@ -8,7 +8,7 @@ const userSchema = new Schema({
   },
   passwordkey: {
     type: String,
-    reqiored: true
+    required: true
   } 
 }, {timestamps: true})
 
