@@ -16,7 +16,10 @@ export default function Home() {
   }
   return (
     <Container>
-      <CssBaseline />   
+      <CssBaseline />  
+      <Box >
+               <AppBar position="static">
+                 <Toolbar>
       {/* <Box
             sx={{
               margin: 8,
@@ -51,7 +54,9 @@ export default function Home() {
         >
             Sign Up
         </Button>
-        
+        </Toolbar>
+               </AppBar>
+         </Box>
         <Box
              sx={{
                margin: 8,
