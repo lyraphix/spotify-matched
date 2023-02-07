@@ -8,10 +8,10 @@ import { AppBar, Toolbar,Container, CssBaseline, Typography, Box, Grid, TextFiel
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] })
-const signedIn = false;
-const username = "";
-const avatar = "";
+// const inter = Inter({ subsets: ['latin'] })
+// const signedIn = false;
+// const username = "";
+// const avatar = "";
 
 export default function Home() {
   // function checkSignedIn() {
