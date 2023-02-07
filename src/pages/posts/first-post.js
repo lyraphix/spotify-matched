@@ -136,7 +136,7 @@ export default function FirstPost() {
             </Typography>
             {/* onSubmit={handleSubmit}  */}
             <Box component="form" noValidate sx={{ mt: 3 }}>
-              <Grid Container spacing={2}>
+              <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <TextField
                     required
