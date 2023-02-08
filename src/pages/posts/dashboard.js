@@ -1,24 +1,29 @@
-// import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import { AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
-
-
-// import { Formik, field, form} from 'formik'
-// import Link from 'next/link';
+import * as React from 'react';
+import { useState } from 'react';
+import { Inter, Open_Sans } from '@next/font/google'
+import { Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 const inter = Inter({ subsets: ['latin'] })
-
+// import { Formik, field, form} from 'formik'
+// import Link from 'next/link';
 export default function Dashboard() {
-  function open({link}) {
-    return window.open("/posts/first-post")
+  
+  const avatar = ""
+  const username = ""
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openMenu = (event) =>{
+    setAnchorEl(event.currentTarget);
   }
+  const closeMenu = () =>{
+    setAnchorEl(null);
+  }
+
   return (
     <Container>
       <CssBaseline />  
       <Box >
-               <AppBar position="static">
+               <AppBar position="fixed">
                   <Toolbar>
                          <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
@@ -26,25 +31,21 @@ export default function Dashboard() {
                          <Typography variant='h2' sx={{ flexGrow: 2 }}>
                            MATCHED
                          </Typography>
-                         <Typography variant='h2' sx={{ flexGrow: 11 }}>
-                           Dashboard
-                         </Typography>
-                   {/* </Box> */}
-                         <Button
-                               variant="text"
-                               size = "medium"
-                               sx={{ flexGrow: 1 }}
-                               href="/posts/first-post"
-                           >
-                               Login
+                         <Button onClick={openMenu}>
+                         <Avatar alt={username} src={avatar} />
                          </Button>
-                         <Button
-                               variant="contained"
-                               size = "medium"
-                               href="/posts/first-post"
-                           >
-                               Sign Up
-                         </Button>
+                         <Menu
+                            id="userMenu"
+                            // aria-labelledby="demo-positioned-button"
+                            anchorEl={anchorEl}
+                            open={Boolean(anchorEl)}
+                            keepMounted
+                            onClose={closeMenu}
+                          >
+                            <MenuItem ><Link href="" underline="none" color="white">{'Profile'}</Link></MenuItem>
+                            <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
+                          </Menu>
+                    
                   </Toolbar>
                </AppBar>
          </Box>
@@ -57,9 +58,10 @@ export default function Dashboard() {
 
                // backgroundColor: 'primary.light',
              }}>
-        <div>
-          SPOTIFY MAAAAATCHED!!!
-        </div>
+              
+        <Box sx={{mt:5}}>
+          Dashboard
+        </Box>
         </Box>
     </Container>
   )

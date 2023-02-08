@@ -1,7 +1,4 @@
-// import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import { AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 
@@ -18,7 +15,7 @@ export default function Home() {
     <Container>
       <CssBaseline />  
       <Box >
-               <AppBar position="static">
+               <AppBar position="fixed">
                   <Toolbar>
                          <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
@@ -54,9 +51,9 @@ export default function Home() {
 
                // backgroundColor: 'primary.light',
              }}>
-        <div>
-          Landing Page
-        </div>
+        <Box sx={{mt:5}}>
+          Dashboard
+        </Box>
         </Box>
     </Container>
   )

@@ -1,7 +1,7 @@
 // import Link from 'next/link';
 // import styles from '@/styles/Home.module.css'
 // import { Card, Row, Text, Input, Spacer, Button } from "@nextui-org/react";
-import { AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
+import { Paper, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
 import { Card } from "@nextui-org/react";
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -83,6 +83,12 @@ export default function FirstPost() {
     },
     
   });
+
+  const background = {
+    paperContainer: {
+        backgroundImage: `url(${"static/src/img/main.jpg"})`
+    }
+  };
   // function login() {
   //   return (
   //     <login>
