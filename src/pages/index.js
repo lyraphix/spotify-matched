@@ -24,11 +24,11 @@ const firebaseConfig = {
   measurementId: "G-LH0JWX82X5"
 };
 
-// Initialize Firebase
+// Initialize Firebase 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-const db = getFirestore(app);
+//const db = getFirestore(app);
 
 const inter = Inter({ subsets: ['latin'] })
 
