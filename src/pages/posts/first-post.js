@@ -174,7 +174,7 @@ export default function FirstPost() {
                   <FormControlLabel
                     control={<Checkbox value="allowExtraEmails" color="primary" />}
                     label={<Typography variant='h3'>I accept the 
-                    <Link href="https://www.termsofservicegenerator.net/live.php?token=HvXPylMhj0isjb0BWhdDDjTGyqHLDEMR" >
+                    <Link href="/posts/tos" >
                     {'Terms of Service'}
                   </Link> and the <Link href="https://www.gdprprivacypolicy.net/live.php?token=RYjiEytOOHcu0QGU3fMFSlUObDcusrYS" >
                     {'Privacy Policy'}

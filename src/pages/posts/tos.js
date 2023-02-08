@@ -68,7 +68,7 @@ export default function FirstPost() {
 
                 <h2>8. Your Privacy</h2>
 
-                <p>Please read our Privacy Policy.</p>
+                <p>Please read our <a href="https://www.gdprprivacypolicy.net/live.php?token=RYjiEytOOHcu0QGU3fMFSlUObDcusrYS">Privacy Policy</a>.</p>
 
                 <h2>9. Governing Law</h2>
 
