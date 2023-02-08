@@ -182,6 +182,7 @@ export default function FirstPost() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                href="/posts/dashboard"
               >
                 Sign Up
               </Button>

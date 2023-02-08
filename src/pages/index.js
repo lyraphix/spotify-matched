@@ -55,7 +55,7 @@ export default function Home() {
                // backgroundColor: 'primary.light',
              }}>
         <div>
-          SPOTIFY MAAAAATCHED!!!
+          Landing Page
         </div>
         </Box>
     </Container>
