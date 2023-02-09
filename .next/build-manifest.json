@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/posts/dashboard.js"
+    ],
+    "/posts/dashboardtrial": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/posts/dashboardtrial.js"
     ]
   },
   "ampFirstPages": []
