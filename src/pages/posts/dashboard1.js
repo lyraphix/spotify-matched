@@ -306,11 +306,13 @@ export default function Dashboard() {
           </Typography>
         </Box>
         <Box
+          fullHeight
           sx={{
             // mt: 0,
             // ml: 10,
-            display: 'flex'
-
+            display: 'flex',
+            flexGrow:1,
+            flexDirection:"column"
           }}>
           <Grid
             container
@@ -322,19 +324,29 @@ export default function Dashboard() {
             <Box sx={{flexGrow:1, display: 'flex'}}></Box>
             <Grid item xs={4} sx={{flexGrow:3}}>
               <Button
-                style={{ minWidth: '275px', minHeight: '200px', flexGrow:1, flexWrap: 'wrap'}}
+                style={{ minHeight: '200px', flexGrow:1}}
+                fullWidth
+              fullHeight
+                // style={{ 
+                //   flexGrow:1}}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'white' }}
                 href="/posts/first-post"
               >
+                {/* <Box sx={{flexGrow:1, display: 'flex'}}></Box> */}
                 Start Matching
+                {/* <Box sx={{flexGrow:1, display: 'flex'}}></Box> */}
               </Button>
             </Grid>
             <Box sx={{flexGrow:1/2, display: 'flex'}}></Box>
             <Grid item xs={4} sx={{flexGrow:3}}>
               <Button
-                style={{ minWidth: '275px', minHeight: '200px', flexGrow:1}}
+              fullWidth
+              fullHeight
+                // style={{ 
+                //   flexGrow:1}}
+                style={{ minHeight: '200px', flexGrow:1}}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'white' }}
@@ -350,10 +362,14 @@ export default function Dashboard() {
 
             <Grid item xs={4} sx={{flexGrow:3}}>
               <Button
-                style={{ minWidth: '275px', minHeight: '200px', flexGrow:1}}
+              fullWidth
+              fullHeight
+                // style={{ 
+                //   flexGrow:1}}
+                style={{ minHeight: '200px', flexGrow:1}}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'white' }}
+                sx={{ mt: 3, color: 'white', justifyContent:"center"}}
                 href="/posts/first-post"
               >
                 Personalized Match
@@ -386,13 +402,16 @@ export default function Dashboard() {
         }}>
         <Grid
           container
+          spacing = {2}
           direction="row"
           justifyContent="space-evenly"
           alignItems="flex-start"
         >
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
-              style={{ minWidth: '150px', minHeight: '150px' }}
+            fullWidth
+            fullHeight
+              style={{minHeight: '130px' }}
               variant="text"
               size="medium"
               sx={{ mt: 3, color: 'white' }}
@@ -404,7 +423,9 @@ export default function Dashboard() {
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
-              style={{ minWidth: '150px', minHeight: '150px' }}
+            fullWidth
+            fullHeight
+              style={{minHeight: '130px' }}
               variant="text"
               size="medium"
               sx={{ mt: 3, color: 'white' }}
@@ -416,7 +437,9 @@ export default function Dashboard() {
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
-              style={{ minWidth: '150px', minHeight: '150px' }}
+            fullWidth
+            fullHeight
+              style={{minHeight: '130px' }}
               variant="text"
               size="medium"
               sx={{ mt: 3, color: 'white' }}
@@ -428,7 +451,9 @@ export default function Dashboard() {
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
-              style={{ minWidth: '150px', minHeight: '150px' }}
+            fullWidth
+            fullHeight
+              style={{minHeight: '130px' }}
               variant="text"
               size="medium"
               sx={{ mt: 3, color: 'white' }}
@@ -440,7 +465,9 @@ export default function Dashboard() {
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
-              style={{ minWidth: '150px', minHeight: '150px' }}
+            fullWidth
+            fullHeight
+              style={{minHeight: '130px' }}
               variant="text"
               size="medium"
               sx={{ mt: 3, color: 'white' }}
