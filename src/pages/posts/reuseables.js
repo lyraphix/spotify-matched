@@ -117,7 +117,7 @@ const makeToolBar = function (username, avatar) {
                         keepMounted
                         onClose={closeMenu}
                     >
-                        <MenuItem ><Link href="/posts/dashboardtrial" underline="none" color="white">{'Profile'}</Link></MenuItem>
+                        <MenuItem ><Link href="/" underline="none" color="white">{'Profile'}</Link></MenuItem>
                         <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
                     </Menu>
 
