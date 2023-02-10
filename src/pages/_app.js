@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }) {
       iconFont: {
         fontFamily: `"Gill Sans", sans-serif`,
         fontWeight: 500,
-        fontSize: '1.3rem',
+        fontSize: '1rem',
       },
       h3: {
         fontWeight: 5,

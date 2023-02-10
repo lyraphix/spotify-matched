@@ -434,7 +434,7 @@ export default function Dashboard() {
           justifyContent="space-evenly"
           alignItems="flex-start"
         >
-            <Box sx={{flexGrow:1/10}}></Box>
+            {/* <Box sx={{flexGrow:1/10}}></Box> */}
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
@@ -451,7 +451,7 @@ export default function Dashboard() {
               
             </Button>
           </Grid>
-          <Box sx={{flexGrow:1/100}}></Box>
+          {/* <Box sx={{flexGrow:1/100}}></Box> */}
 
           <Grid item xs={2} sx={{flexGrow:3}}>
             <Button
@@ -515,7 +515,7 @@ export default function Dashboard() {
 
             </Button>
           </Grid>
-          <Box sx={{flexGrow:1/10}}></Box>
+          {/* <Box sx={{flexGrow:1/10}}></Box> */}
 
         </Grid>
       </Box>
