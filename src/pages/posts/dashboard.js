@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
-import { Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import MenuIcon from '@mui/icons-material/Menu';
+import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 const inter = Inter({ subsets: ['latin'] })
+
+  
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 export default function Dashboard() {
@@ -26,6 +29,13 @@ export default function Dashboard() {
   }
   const closeMenu = () => {
     setAnchorEl(null);
+  }
+  const [anchorDrawer, setAnchorDrawer] = useState(null);
+  const openDrawer = (event) => {
+    setAnchorDrawer(event.currentTarget);
+  }
+  const closeDrawer = () => {
+    setAnchorDrawer(null);
   }
   const [an1, setan1] = useState(null);
   const openMenu1 = (event) => {
@@ -85,8 +95,10 @@ export default function Dashboard() {
       </Box>
       <Box
         sx={{
+          display: "flex",
           mt: 10,
           ml: -15,
+          width: 99/100
         }}>
 
         <Grid

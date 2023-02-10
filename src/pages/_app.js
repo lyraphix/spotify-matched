@@ -24,6 +24,11 @@ export default function App({ Component, pageProps }) {
       // text: {
       //   primary: '#ffffff',
       // },
+      
+    },
+    background: {
+      default: '#000000',
+      paper: '#000000',
     },
     spacing: 8,
     shape: {
@@ -32,7 +37,7 @@ export default function App({ Component, pageProps }) {
     typography: {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 200,
+        fontWeight: 500,
         fontSize: '1.8rem',
       },
       h2: {

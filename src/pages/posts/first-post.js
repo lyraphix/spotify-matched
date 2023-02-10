@@ -28,7 +28,7 @@ export default function FirstPost() {
         main:'#ffffff',
       },
       background: {
-        default: '#cbcbcb',
+        default: '#232222',
       },
     },
     spacing: 8,
@@ -38,12 +38,12 @@ export default function FirstPost() {
     typography: {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 100,
+        fontWeight: 500,
         fontSize: '2.5rem',
       },
       h2: {
         fontSize: '2.5rem',
-        fontWeight: 10,
+        fontWeight: 100,
         fontStretch: "condensed",
         fontFamily: "cursive",
       },
@@ -89,10 +89,10 @@ export default function FirstPost() {
               flexDirection: 'row',
             }}>
               
-              <Typography variant='h1' color={"info"}>
+              <Typography variant='h1' color={"white"}>
                 Spotify
               </Typography>
-              <Typography variant='h2' color={"info"}>
+              <Typography variant='h2' color={"white"}>
                 MATCHED
               </Typography>
               <></>
@@ -159,7 +159,7 @@ export default function FirstPost() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                href="/posts/dashboard"
+                href="/posts/dashboard1"
               >
                 Sign Up
               </Button>

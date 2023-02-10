@@ -31,10 +31,10 @@ export default function Home() {
     return window.open("/posts/first-post")
   }
   return (
-    <Container>
+    <Container >
       <CssBaseline />  
       <Box >
-               <AppBar position="fixed">
+               <AppBar position="fixed" sx={{background:"#000000", borderBottom: 0.5, borderColor: "white"}}>
                   <Toolbar>
                          <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
