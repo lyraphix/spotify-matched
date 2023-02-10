@@ -46,6 +46,11 @@ export default function App({ Component, pageProps }) {
         fontStretch: "condensed",
         fontFamily: "cursive",
       },
+      iconFont: {
+        fontFamily: `"Gill Sans", sans-serif`,
+        fontWeight: 500,
+        fontSize: '1rem',
+      },
       h3: {
         fontWeight: 5,
         fontSize: '1rem',
