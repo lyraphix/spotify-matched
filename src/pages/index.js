@@ -35,7 +35,7 @@ export default function Home() {
       <CssBaseline />  
       <Box >
                <AppBar position="fixed" >
-                  <Toolbar sx={{backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
+                  <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
                          {/* <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
                          </Typography> */}
