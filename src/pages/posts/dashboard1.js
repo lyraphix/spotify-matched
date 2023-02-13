@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
+import { QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -60,7 +62,7 @@ export default function Dashboard() {
         mt: 10,
         // ml:5,
         // mr:5,
-        mb: 5
+        mb: 3
         // ml:20, 
         // alignItems:"center",
         // justify:"center", 
@@ -77,11 +79,11 @@ export default function Dashboard() {
             direction: "row"
           }}>
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
-          <Typography variant="h2">You can just remove the code instead of commenting out if its margin stuff</Typography>
+          <Typography variant="h2Large">Hi, Y/N</Typography>
         </Box>
         <Box
           sx={{
-            mt: 5,
+            mt: 2,
             ml: 5,
             display: 'flex'
 
@@ -90,6 +92,9 @@ export default function Dashboard() {
           <Typography variant="h1">
             Personalize Top Genres
           </Typography>
+          {/* <IconButton >
+            <HelpOutlineIcon/>
+          </IconButton> */}
         </Box>
         <Box
           fullHeight
@@ -164,7 +169,7 @@ export default function Dashboard() {
               >
                 {/* <Box sx={{ mt: 3, color: 'white', justifyContent:"center", alignItems:"center",
                 direction: "row"}}> */}
-                <Typography variant='iconFont' letterSpacing={0.5}>Personalized Match</Typography>
+                <Typography variant='iconFont' letterSpacing={0.5}>Your Match</Typography>
 
                   
                   {/* </Box> */}

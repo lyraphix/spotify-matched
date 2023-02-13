@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
 import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 const makeToolBar = function (username, avatar) {
@@ -36,14 +39,15 @@ const makeToolBar = function (username, avatar) {
                         anchor='left'
                         open={Boolean(anchorDrawer)}
                         onClose={closeDrawer}
+                        
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box>
-                            <List>
-                                <ListItem key={"Home"} disablePadding>
+                        <Box >
+                            <List >
+                                <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard1">
                                         <ListItemIcon>
-                                            <InboxIcon />
+                                            <HomeIcon />
                                         </ListItemIcon>
                                         <ListItemText primary={"Home"}/>
                                     </ListItemButton>
@@ -51,7 +55,7 @@ const makeToolBar = function (username, avatar) {
                                 <ListItem key={"Search"} disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <InboxIcon />/
+                                            <SearchIcon />
                                         </ListItemIcon>
                                         <ListItemText primary={"Search"} />
                                     </ListItemButton>
@@ -59,36 +63,36 @@ const makeToolBar = function (username, avatar) {
                                 <ListItem key={"Friends"} disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <InboxIcon />/
+                                            <Diversity3Icon />
                                         </ListItemIcon>
                                         <ListItemText primary={"Friends"} />
                                     </ListItemButton>
                                 </ListItem>
                             </List>
-                            <Divider />
+                            <Divider sx={{height:0.1, width: 1}}/>
                             <List>
-                                <ListItem key={"Create Playlist"} disablePadding>
+                                <ListItem key={"Create Playlist"}>
                                     <ListItemButton>
-                                        <ListItemIcon>
-                                            <InboxIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={"Create Playlist"} />
+                                        {/* <ListItemIcon> */}
+                                            {/* <InboxIcon /> */}
+                                        {/* </ListItemIcon> */}
+                                        <ListItemText primary={"Your Playlists"} disablePadding />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Matched Playlist"} disablePadding>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <InboxIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={"Matched Playlist"} />
+                                <ListItem key={"Matched Playlist"} >
+                                    <ListItemButton >
+                                        {/* <ListItemIcon>
+                                            {/* <InboxIcon /> */}
+                                        {/* </ListItemIcon> */} 
+                                        <ListItemText primary={"Matched Playlist"} disablePadding />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Episodes"} disablePadding>
+                                <ListItem key={"Episodes"} >
                                     <ListItemButton>
-                                        <ListItemIcon>
-                                            <InboxIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={"Episodes"} />
+                                        {/* <ListItemIcon> */}
+                                            {/* <InboxIcon /> */}
+                                        {/* </ListItemIcon> */}
+                                        <ListItemText primary={"Episodes"} disablePadding/>
                                     </ListItemButton>
                                 </ListItem>
 

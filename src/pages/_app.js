@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }) {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
         fontWeight: 350,
-        fontSize: '1.8rem',
+        fontSize: '1.7rem',
       },
       h2: {
         fontSize: '2rem',
@@ -62,6 +62,12 @@ export default function App({ Component, pageProps }) {
       h3: {
         fontWeight: 5,
         fontSize: '1rem',
+      },
+      h2Large: {
+        fontSize: '4rem',
+        fontWeight: 150,
+        fontStretch: "condensed",
+        fontFamily: "cursive",
       },
     },
     
