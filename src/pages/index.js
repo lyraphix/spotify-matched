@@ -34,19 +34,19 @@ export default function Home() {
     <Container >
       <CssBaseline />  
       <Box >
-               <AppBar position="fixed" sx={{background:"#000000", borderBottom: 0.5, borderColor: "white"}}>
-                  <Toolbar>
-                         <Typography variant='h1' sx={{ ml: 2}}>
+               <AppBar position="fixed" >
+                  <Toolbar sx={{backgroundColor:"primary.dark", borderBottom: 0.1, borderColor: "divider"}}>
+                         {/* <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
-                         </Typography>
-                         <Typography variant='h2' sx={{ flexGrow: 11 }}>
+                         </Typography> */}
+                         <Typography variant='h2' sx={{ flexGrow: 13 }}>
                            MATCHED
                          </Typography>
                    {/* </Box> */}
                          <Button
                                variant="text"
                                size = "medium"
-                               sx={{ flexGrow: 1 }}
+                               sx={{ flexGrow: 1, color:"primary"}}
                                href="/posts/first-post"
                            >
                                Login

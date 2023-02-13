@@ -14,46 +14,62 @@ export default function FirstPost() {
     palette: {
       mode: 'light',
       primary: {
-        main: '#24da54',
-        light: '#b3eaa9',
-        dark: '#0c3b19',
+        main: '#449b7a',
+        light: '#c8d4d0',
+        dark: '#2B3B5D',
       },
       secondary: {
-        main: '#7574ff',
-        light: '#5756b5',
-        dark: '#1b2d4a',
+        main: '#608ab8',
+        light: '#A5BED6',
+        dark: '#3F6758',
       },
-      divider: 'rgba(255,255,255,0.12)',
+      third: {
+        main: '#e15868',
+        light: '#E6A8AF',
+        dark: '#90444C',
+      },
+      divider: '#ffffff',
       info: {
         main:'#ffffff',
       },
       background: {
-        default: '#232222',
+        default: '#33323B',
       },
     },
-    spacing: 8,
-    shape: {
-      borderRadius: 4,
+
+  spacing: 8,
+  shape: {
+    borderRadius: 4,
+  },
+  typography: {
+    h1: {
+      fontFamily: `"Gill Sans", sans-serif`,
+      fontWeight: 500,
+      fontSize: '1.8rem',
     },
-    typography: {
-      h1: {
-        fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 500,
-        fontSize: '2.5rem',
-      },
-      h2: {
-        fontSize: '2.5rem',
-        fontWeight: 100,
-        fontStretch: "condensed",
-        fontFamily: "cursive",
-      },
-      h3: {
-        fontWeight: 5,
-        fontSize: '1rem',
-      },
+    h2: {
+      fontSize: '2rem',
+      fontWeight: 150,
+      fontStretch: "condensed",
+      fontFamily: "cursive",
     },
-    
+    iconFont: {
+      fontFamily: `"Gill Sans", sans-serif`,
+      fontWeight: 500,
+      fontSize: '1rem',
+    },
+    h3: {
+      fontWeight: 5,
+      fontSize: '1rem',
+    },
+  },
   });
+
+  // const background = {
+  //   paperContainer: {
+  //       backgroundImage: `url(${"static/src/img/main.jpg"})`
+  //   }
+  // };
 
   const background = {
     paperContainer: {
@@ -89,9 +105,9 @@ export default function FirstPost() {
               flexDirection: 'row',
             }}>
               
-              <Typography variant='h1' color={"white"}>
+              {/* <Typography variant='h1' color={"white"}>
                 Spotify
-              </Typography>
+              </Typography> */}
               <Typography variant='h2' color={"white"}>
                 MATCHED
               </Typography>

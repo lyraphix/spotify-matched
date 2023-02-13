@@ -28,7 +28,7 @@ const makeToolBar = function (username, avatar) {
 
         <Box >
             <AppBar position="fixed">
-                <Toolbar>
+                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
 
                     {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
@@ -41,11 +41,11 @@ const makeToolBar = function (username, avatar) {
                         <Box>
                             <List>
                                 <ListItem key={"Home"} disablePadding>
-                                    <ListItemButton>
+                                    <ListItemButton href="/posts/dashboard1">
                                         <ListItemIcon>
-                                            <InboxIcon />/
+                                            <InboxIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary={"Home"} />
+                                        <ListItemText primary={"Home"}/>
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem key={"Search"} disablePadding>
@@ -117,7 +117,7 @@ const makeToolBar = function (username, avatar) {
                         keepMounted
                         onClose={closeMenu}
                     >
-                        <MenuItem ><Link href="/" underline="none" color="white">{'Profile'}</Link></MenuItem>
+                        <MenuItem ><Link href="/posts/profile" underline="none" color="white">{'Profile'}</Link></MenuItem>
                         <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
                     </Menu>
 

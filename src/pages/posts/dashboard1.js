@@ -119,7 +119,7 @@ export default function Dashboard() {
                 //   flexGrow:1}}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'white', backgroundColor:"#a978c5"}}
+                sx={{ mt: 3, color: 'primary.dark', backgroundColor:"primary.light"}}
                 href="/posts/first-post"
               >
                 {/* <Box sx={{flexGrow:1, display: 'flex'}}></Box> */}
@@ -138,7 +138,7 @@ export default function Dashboard() {
                 style={{ minHeight: '200px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'white', backgroundColor:"#d4730c" }}
+                sx={{ mt: 3, color: 'secondary.dark', backgroundColor:"secondary.light" }}
                 href="/posts/first-post"
               >
                 <Typography variant='iconFont'>Exact Match</Typography>
@@ -159,7 +159,7 @@ export default function Dashboard() {
                 style={{ minHeight: '200px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'white', justifyContent: "center" }}
+                sx={{ mt: 3, color: 'third.dark', backgroundColor:"third.light", justifyContent: "center" }}
                 href="/posts/first-post"
               >
                 {/* <Box sx={{ mt: 3, color: 'white', justifyContent:"center", alignItems:"center",
@@ -210,7 +210,7 @@ export default function Dashboard() {
               style={{ minHeight: '130px' }}
               variant="text"
               size="medium"
-              sx={{ mt: 3, color: 'white', backgroundColor:"#4c8c6b" }}
+              sx={{ mt: 3, color: 'info.main', backgroundColor:"third.dark" }}
               href="/posts/first-post"
             >
                 <Typography variant='iconFont' letterSpacing={0.5}>{"" + user1}</Typography>
@@ -227,7 +227,7 @@ export default function Dashboard() {
               style={{ minHeight: '130px' }}
               variant="text"
               size="medium"
-              sx={{ mt: 3, color: 'white', backgroundColor:"#1e2a43" }}
+              sx={{ mt: 3, color: 'info.main', backgroundColor:"secondary.dark" }}
               href="/posts/first-post"
             >
                 <Typography variant='iconFont' letterSpacing={0.5}>{"" + user2}</Typography>
@@ -243,7 +243,7 @@ export default function Dashboard() {
               style={{ minHeight: '130px' }}
               variant="text"
               size="medium"
-              sx={{ mt: 3, color: 'white', backgroundColor:"#a978c5" }}
+              sx={{ mt: 3, color: 'info.main', backgroundColor:"primary.dark" }}
               href="/posts/first-post"
             >
                 <Typography variant='iconFont' letterSpacing={0.5}>{"" + user3}</Typography>
@@ -259,7 +259,7 @@ export default function Dashboard() {
               style={{ minHeight: '130px' }}
               variant="text"
               size="medium"
-              sx={{ mt: 3, color: 'white', backgroundColor:"#1e2a43" }}
+              sx={{ mt: 3, color: 'info.main', backgroundColor:"secondary.dark" }}
               href="/posts/first-post"
             >
                 <Typography variant='iconFont' letterSpacing={0.5}>{"" + user4}</Typography>
@@ -275,7 +275,7 @@ export default function Dashboard() {
               style={{ minHeight: '130px' }}
               variant="text"
               size="medium"
-              sx={{ mt: 3, color: 'white', backgroundColor:"#4c8c6b"}}
+              sx={{ mt: 3, color: 'info.main', backgroundColor:"third.dark"}}
               href="/posts/first-post"
             >
                 <Typography variant='iconFont' letterSpacing={0.5}>{"" + user5}</Typography>

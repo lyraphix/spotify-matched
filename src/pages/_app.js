@@ -8,26 +8,34 @@ export default function App({ Component, pageProps }) {
     palette: {
       mode: 'dark',
       primary: {
-        main: '#24da54',
-        light: '#b3eaa9',
-        dark: '#0c3b19',
+        main: '#449b7a',
+        light: '#c8d4d0',
+        dark: '#2B3B5D',
       },
       secondary: {
-        main: '#7574ff',
-        light: '#5756b5',
-        dark: '#1b2d4a',
+        main: '#608ab8',
+        light: '#A5BED6',
+        dark: '#3F6758',
       },
-      divider: 'rgba(255,255,255,0.12)',
+      third: {
+        main: '#e15868',
+        light: '#E6A8AF',
+        dark: '#90444C',
+      },
+      divider: '#ffffff',
       info: {
         main:'#ffffff',
-      }
+      },
       // text: {
       //   primary: '#ffffff',
       // },
+      background: {
+        default: '#19191B',
+      },
       
     },
     background: {
-      default: '#000000',
+      default: '#19191B',
       paper: '#000000',
     },
     spacing: 8,
@@ -37,7 +45,7 @@ export default function App({ Component, pageProps }) {
     typography: {
       h1: {
         fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 500,
+        fontWeight: 350,
         fontSize: '1.8rem',
       },
       h2: {
