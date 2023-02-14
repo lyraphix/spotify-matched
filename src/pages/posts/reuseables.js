@@ -45,7 +45,7 @@ const makeToolBar = function (username, avatar) {
                         <Box >
                             <List >
                                 <ListItem key={"Home"} disablePadding >
-                                    <ListItemButton href="/posts/dashboard1">
+                                    <ListItemButton href="/posts/dashboard">
                                         <ListItemIcon>
                                             <HomeIcon />
                                         </ListItemIcon>

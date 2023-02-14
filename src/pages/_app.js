@@ -1,26 +1,40 @@
 // import '@/styles/globals.css'
+import { Inter } from '@next/font/google'
 import { createTheme, ThemeProvider } from '@mui/material';
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 
 export default function App({ Component, pageProps }) {
+  // const inter = Inter({ subsets: ['latin'] })
   const theme = createTheme({
     palette: {
       mode: 'dark',
       primary: {
-        main: '#449b7a',
-        light: '#c8d4d0',
-        dark: '#2B3B5D',
+        main: '#608108',
+        light: '#B5C68C',
+        dark: '#394221',
+        text: "white"
       },
       secondary: {
-        main: '#608ab8',
-        light: '#A5BED6',
-        dark: '#3F6758',
+        main: '#043D7A',
+        light: '#92AFCE',
+        dark: '#0C233B',
+        text: "white"
+
       },
       third: {
-        main: '#e15868',
-        light: '#E6A8AF',
-        dark: '#90444C',
+        main: '#A02937',
+        light: '#F0D7DA',
+        dark: '#3D1519',
+        text: "white"
+
+      },
+      forth: {
+        main: '#DD7C22',
+        light: '#E9BF98',
+        dark: '#54361A',
+        text: "white"
+
       },
       divider: '#ffffff',
       info: {
@@ -55,9 +69,9 @@ export default function App({ Component, pageProps }) {
         fontFamily: "cursive",
       },
       iconFont: {
-        fontFamily: `"Gill Sans", sans-serif`,
-        fontWeight: 500,
-        fontSize: '1rem',
+        // fontFamily: `"Gill Sans", sans-serif`,
+        fontWeight: 700,
+        fontSize: '1.8rem',
       },
       h3: {
         fontWeight: 5,
