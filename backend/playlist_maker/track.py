@@ -1,4 +1,7 @@
-# class of a song track
+"""
+Song track class
+Author: Ellie Paek
+"""
 
 class Track:
 
