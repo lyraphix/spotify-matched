@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/posts/vibe-picker": [
+    "/posts/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/posts/vibe-picker.js"
+      "static/chunks/pages/posts/dashboard.js"
     ]
   },
   "ampFirstPages": []
