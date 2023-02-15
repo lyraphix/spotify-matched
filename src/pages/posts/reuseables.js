@@ -6,6 +6,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
+import MessageIcon from '@mui/icons-material/Message';
 import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 const makeToolBar = function (username, avatar) {
@@ -75,6 +76,14 @@ const makeToolBar = function (username, avatar) {
                                             <Diversity3Icon />
                                         </ListItemIcon>
                                         <ListItemText primary={"Friends"} />
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem key={"Messages"} disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <MessageIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary={"Messages"} />
                                     </ListItemButton>
                                 </ListItem>
                             </List>
