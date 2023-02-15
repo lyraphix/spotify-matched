@@ -150,12 +150,12 @@ export default function Dashboard() {
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
-                href="/posts/first-post"
+                href="/posts/vibe-picker"
               >
                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 {/* <Paper > */}
-                <Typography variant='iconFont'>Find</Typography>
-                <Typography variant='iconFont'>people</Typography>
+                <Typography variant='iconFont'>Vibe</Typography>
+                <Typography variant='iconFont'>Picker</Typography>
 
                 {/* <Image style={{backgroundImage: `url(${"static/src/img/Friends.jpg"})`}}></Image> */}
                 {/* <CardMedia
