@@ -31,7 +31,7 @@ const makeToolBar = function (username, avatar) {
 
         <Box >
             <AppBar position="fixed">
-                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
+                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.5, borderColor: "divider"}}>
 
                     {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
@@ -39,10 +39,18 @@ const makeToolBar = function (username, avatar) {
                         anchor='left'
                         open={Boolean(anchorDrawer)}
                         onClose={closeDrawer}
-                        
+                        PaperProps={{
+                            sx: {
+                              backgroundColor: "black",
+                              color: "white",
+                              width: 200
+                            }
+                          }}
+                        // sx={{color:"background.main"}}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box >
+                        {/* <Toolbar sx={{height: 4}}></Toolbar> */}
+                        <Box sx={{mt:2, backgroundColor:"background.main"}}>
                             <List >
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
@@ -71,28 +79,28 @@ const makeToolBar = function (username, avatar) {
                             </List>
                             <Divider sx={{height:0.1, width: 1}}/>
                             <List>
-                                <ListItem key={"Create Playlist"}>
+                                <ListItem key={"Create Playlist"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Your Playlists"} disablePadding />
+                                        <ListItemText primary={"Your Playlists"}  />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Matched Playlist"} >
+                                <ListItem key={"Matched Playlist"} disablePadding>
                                     <ListItemButton >
                                         {/* <ListItemIcon>
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */} 
-                                        <ListItemText primary={"Matched Playlist"} disablePadding />
+                                        <ListItemText primary={"Matched Playlist"} />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Episodes"} >
+                                <ListItem key={"Episodes"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Episodes"} disablePadding/>
+                                        <ListItemText primary={"Episodes"} />
                                     </ListItemButton>
                                 </ListItem>
 

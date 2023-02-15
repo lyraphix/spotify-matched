@@ -1,7 +1,7 @@
 // import Link from 'next/link';
 // import styles from '@/styles/Home.module.css'
 // import { Card, Row, Text, Input, Spacer, Button } from "@nextui-org/react";
-import { Paper, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
+import { Divider, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
 import { Card } from "@nextui-org/react";
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -192,6 +192,17 @@ export default function FirstPost() {
                   </Typography>
                 </Grid>
               </Grid>
+              <Divider sx={{height:0.1, width: 1, backgroundColor: "background.main"}}/>
+              <Button
+                // onclick={signup()}
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+                href="/posts/dashboard"
+              >
+                Login with 
+              </Button>
               <Box
               sx={{
                 display: 'flex',

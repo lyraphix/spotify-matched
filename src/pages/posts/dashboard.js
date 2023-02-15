@@ -59,7 +59,7 @@ export default function Dashboard() {
         makeToolBar(username, avatar)}
 
       <Box sx={{
-        mt: 10,
+        mt: 15,
         // ml:5,
         // mr:5,
         mb: 3
@@ -99,8 +99,8 @@ export default function Dashboard() {
         <Box
           fullHeight
           sx={{
-            // mt: 0,
-            ml: 2,
+            mt: 8,
+            ml: 5,
             mr: 2,
 
             display: 'flex',
@@ -119,7 +119,7 @@ export default function Dashboard() {
             <Box sx={{ flexGrow: 5, display: 'flex' }}></Box>
             <Grid item xs={4} sx={{ flexGrow: 3 }}>
               <Button
-                style={{ minHeight: '200px', flexGrow: 1}}
+                style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
                 fullHeight
                 // style={{ 
@@ -175,7 +175,7 @@ export default function Dashboard() {
                 fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '425px', flexGrow: 1 }}
+                style={{ minHeight: '374px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
@@ -209,7 +209,7 @@ export default function Dashboard() {
                 fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '425px', flexGrow: 1 }}
+                style={{ minHeight: '374px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'primary.text', backgroundColor:"primary.main", alignItems: "stretch"}}
