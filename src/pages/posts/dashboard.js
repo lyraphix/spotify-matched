@@ -4,7 +4,7 @@ import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { CardMedia, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import { CardMedia, Card, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
@@ -29,7 +29,20 @@ export default function Dashboard() {
   const plist1 = "more placeholders"
   const plist2 = "less placeholders"
 
-
+  const styles = {
+    media: {
+      height: 0,
+      paddingTop: '56.25%' // 16:9
+    },
+    card: {
+      position: 'relative',
+    },
+    overlay: {
+      position: 'absolute',
+      top: '40px',
+      left: '40px'
+    }
+  }
 
   const [an1, setan1] = useState(null);
   const openMenu1 = (event) => {
@@ -153,20 +166,20 @@ export default function Dashboard() {
                 sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
                 href="/posts/your-match"
               >
-                <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                {/* <Paper > */}
-                <Typography variant='iconFont'>Your</Typography>
-                <Typography variant='iconFont'>Match</Typography>
-
-                {/* <Image style={{backgroundImage: `url(${"static/src/img/Friends.jpg"})`}}></Image> */}
-                {/* <CardMedia
+                <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                  <Card styles={styles.card}>
+                    <Typography style={styles.overlay} variant='iconFont'>Your Match</Typography>
+                    <CardMedia
+                    styles={styles.media}
+                    sx={{flexGrow: 1}}
                     component="img"
-                    height="130"
-                    image="/static/src/img/friends.png"
+                    height="358"
+                    image="/friends.jpg"
                     alt="Paella dish"
-                /> */}
+                  />
+
+                  </Card>
                 </Grid>
-                
                 
               </Button>
 
