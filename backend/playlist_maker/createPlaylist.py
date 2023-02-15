@@ -1,3 +1,8 @@
+"""
+A testing function for creating a basic playlist
+Author: Ellie Paek
+"""
+
 import os
 
 from playlistMaker import playlistmaker

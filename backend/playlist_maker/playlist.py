@@ -1,4 +1,7 @@
-# class for playlist
+"""
+Class for building a playlist
+Author: Ellie Paek
+"""
 
 class Playlist:
     

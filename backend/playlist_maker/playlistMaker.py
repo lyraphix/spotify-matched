@@ -1,3 +1,10 @@
+"""
+Playlist making class, for now helps create a playlist with top 20 tracks
+Author: Ellie Paek
+Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
+To do: add recommended songs, combine multiple users' songs into a playlist, separate by genre
+"""
+
 import json
 import requests
 
