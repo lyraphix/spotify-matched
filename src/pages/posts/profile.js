@@ -40,99 +40,126 @@ export default function profile() {
 
 
     return (
-        <Container>
+        <Container sx={{
+            flexGrow: 1
+        }}>
             <CssBaseline />
-            <Box>
+            <Box sx={{
+                        flexGrow: 1
+                    }}>
                 render() {
                     makeToolBar()}
 
                 <Box
                     sx={{
-                        ml: -10, mt: 12, flexGrow: 1
+                        mt: 12, flexGrow: 1
                     }}
                 >
-                    <Grid
-                        container
+                    <Box
                         direction="row"
-                        justifyContent="left"
-                        spacing={1}
-                        alignItems="center"
+                        sx={{justifyContent:"left", alignItems:'center'}}
+                        
                     >
-                        <Grid item xs={6}
-
-                            sx={{ flexGrow: 1, alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                            <Button
-                                //onClick={}
-                                //sx={{ height: '250px', width: '250px' }}
-                                style={{ borderRadius: 125, flexGrow: 1 }}
-                                component="label"
-                            >
-                                <input
-                                    type="file"
-                                    hidden
-                                    id="profilpic"
-                                    name="profilepic"
-                                />
-                                <Avatar
-
-                                    sx={{ height: '125px', width: '125px', flexGrow: 1 }}
-                                    size="medium" alt="UserProfile" src={avatar} />
-                            </Button>
-                            <Box sx={{ mt: 2, flexGrow: 1, display: 'flex' }}></Box>
-                            <Stack sx={{ flexGrow: 1 }}
-                                direction="row"
-                                divider={<Divider orientation="vertical" flexItem />}
-                                spacing={2}
-                            >
-                                <Box>
-                                    <Typography variant='h1'> {follower}</Typography>
-                                    <Typography variant='h9'> Follower</Typography>
-                                </Box>
-                                <Box>
-                                    <Typography variant='h1'> {following}</Typography>
-                                    <Typography variant='h9'> Following</Typography>
-                                </Box>
-                                <Box>
-                                    <Typography variant='h1'> {recentlylistened}</Typography>
-                                    <Typography variant='h9'>Recent</Typography>
-                                </Box>
-                            </Stack>
-
-                        </Grid>
                         <Grid
-                            sx={{ ml: -55, flexGrow: 1 }}>
-                            <Typography variant='h1'>
-                                {username}
-                            </Typography>
-                            <Typography variant='h10'>
-                                {mood}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={4}
-                            sx={{ flexGrow: 1, alignItems: "center", direction: "column", justifyContent: "center"}}>
-                            <Button
-                                style={{ borderRadius: 80, flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}
-
-                                sx={{ color: 'black', backgroundColor: "white" }}
-                            >
-                                {<Typography
-                                    sx={{ minHeight: '20px', minWidth: '120px' }}
+                            container
+                            direction= "row"
+                            sx={{ flexGrow: 1, direction: "column", justifyContent: "left", }}>
+                                <Grid
+                                    container
+                                    direction= "row"
+                                    // justifyContent="space-evenly"
+                                    // alignItems="flex-start"
                                 >
+                                    <Box sx={{flexGrow:0.1}}></Box>
+                                    <Button
+                                        //onClick={}
+                                        //sx={{ height: '250px', width: '250px' }}
+                                        style={{ borderRadius: 125 }}
+                                        component="label"
+                                    >
+                                        <input
+                                            type="file"
+                                            hidden
+                                            id="profilpic"
+                                            name="profilepic"
+                                        />
+                                    <Avatar
 
-                                    Follow
+                                            sx={{ height: '125px', width: '125px', flexGrow: 1 }}
+                                            size="medium" alt="UserProfile" src={avatar} />
+                                    </Button>
+                                    <Box sx={{flexGrow:0.1}}></Box>
+                                    <Grid
+                                        sx={{mt:5, flexGrow: 1 }}>
+                                        <Typography variant='h1'>
+                                            {username}
+                                        </Typography>
+                                        <Typography variant='h10'>
+                                            {mood}
+                                        </Typography>
+                                    </Grid>
+                                    <Box sx={{flexGrow:0.2}}></Box>
+                                    <Button
+                                            style={{ borderRadius: 80, alignItems: 'center', justifyContent: 'center' }}
 
-                                </Typography>}
-                            </Button>
+                                            sx={{ mt:12, height: 40, width: 150, color: 'black', backgroundColor: "white" }}
+                                        >
+                                            {<Typography
+                                                sx={{ minHeight: '20px', minWidth: '120px' }}
+                                            >
+
+                                                Follow
+
+                                            </Typography>}
+                                        </Button>
+                                        <Box sx={{flexGrow:0.2}}></Box>
+                                    
+                                        
+                                </Grid>
+                                <Grid container
+                                    direction= "row">
+                                    <Box sx={{flexGrow:0.05}}></Box>
+
+                                <Stack sx={{ mt: 3, flexGrow: 1 }}
+                                        direction="row"
+                                        divider={<Divider orientation="vertical" flexItem />}
+                                        spacing={2}
+                                    >
+            
+                                        <Box sx={{alignItems: "center", justifyContent: "center", direction: "row"}}>
+                                            <Typography variant='h1'> {follower}</Typography>
+                                            <Typography variant='h9'> Follower</Typography>
+                                        </Box>
+                                        <Box
+                                            sx={{
+                                                display: "grid",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                direction: "row"
+                                            }}>
+                                            <Typography variant='h1'> {following}</Typography>
+                                            <Typography variant='h9'> Following</Typography>
+                                        </Box>
+                                        <Box sx={{justifyContent:"center", alignItems:'center'}}>
+                                            <Typography variant='h1'> {recentlylistened}</Typography>
+                                            <Typography variant='h9'>Recent</Typography>
+                                        </Box>
+                                    </Stack>
+                                </Grid>
+
+                                
                         </Grid>
+                        
+                        
 
-                    </Grid>
+                    </Box>
                 </Box>
             </Box>
 
             <Box
                 fullHeight
                 sx={{
-                    flexGrow: 1, mt: 10, ml: -10, display: 'flex',
+                    flexGrow: 1, mt: 10, display: 'flex',
                     flexGrow: 1,
                     flexDirection: "column"
                 }}
