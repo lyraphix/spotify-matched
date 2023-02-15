@@ -43,15 +43,16 @@ const makeToolBar = function (username, avatar) {
                             sx: {
                               backgroundColor: "black",
                               color: "white",
-                              width: 200
+                              width: 180
                             }
                           }}
                         // sx={{color:"background.main"}}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
                         {/* <Toolbar sx={{height: 4}}></Toolbar> */}
+                          
                         <Box sx={{mt:2, backgroundColor:"background.main"}}>
-                            <List >
+                            <List sx={{ml:1}}>
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
                                         <ListItemIcon>
@@ -78,7 +79,7 @@ const makeToolBar = function (username, avatar) {
                                 </ListItem>
                             </List>
                             <Divider sx={{height:0.1, width: 1}}/>
-                            <List>
+                            <List sx={{ml:1}}>
                                 <ListItem key={"Create Playlist"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
