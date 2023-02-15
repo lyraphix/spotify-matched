@@ -71,7 +71,7 @@ export default function App({ Component, pageProps }) {
       iconFont: {
         // fontFamily: `"Gill Sans", sans-serif`,
         fontWeight: 700,
-        fontSize: '1.8rem',
+        fontSize: '1.3rem',
       },
       h3: {
         fontWeight: 5,
