@@ -76,7 +76,7 @@ export default function Dashboard() {
         <Box // Buttons
           fullHeight
           sx={{
-            mt: 8,
+            mt: 11,
             display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
@@ -92,14 +92,14 @@ export default function Dashboard() {
             {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
             <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ flexGrow: 0.5 }}>
+            <Box sx={{ flexGrow: 0.5, flexGrow: 1 }}>
               <Button
-                style={{ minHeight: '150px', flexGrow: 2}}
+                style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
                 fullHeight
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'forth.text', backgroundColor:"forth.main", alignItems: "stretch"}}
+                sx={{ mt: 0, color: 'forth.text', backgroundColor:"forth.main", alignItems: "stretch"}}
                 href="/posts/first-post"
               >
                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
@@ -149,7 +149,7 @@ export default function Dashboard() {
                 style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
+                sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
                 href="/posts/first-post"
               >
                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
@@ -181,7 +181,7 @@ export default function Dashboard() {
                 style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'primary.text', backgroundColor:"primary.main", alignItems: "stretch"}}
+                sx={{ mt: 0, color: 'primary.text', backgroundColor:"primary.main", alignItems: "stretch"}}
                 href="/posts/first-post"
               >
                  <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
