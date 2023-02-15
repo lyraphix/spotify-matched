@@ -93,7 +93,7 @@ export default function Dashboard() {
             {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
             <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ mb: 3, flexGrow: 0.5, flexGrow: 1 }}>
+            <Box sx={{ mb: 3, display: 'flex', flexGrow: 0.5, flexGrow: 1 }}>
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
@@ -141,7 +141,7 @@ export default function Dashboard() {
               
             </Box>
             <Box sx={{flexGrow:1}}></Box>
-            <Box item xs={4} sx={{ mb: 3, flexGrow: 8, flexDirection:"row" }}>
+            <Box sx={{ mb: 3, display: 'flex', flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
                 fullHeight
