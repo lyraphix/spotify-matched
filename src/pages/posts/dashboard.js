@@ -151,7 +151,7 @@ export default function Dashboard() {
                 variant="text"
                 size="medium"
                 sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
-                href="/posts/first-post"
+                href="/posts/your-match"
               >
                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 {/* <Paper > */}
