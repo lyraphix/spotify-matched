@@ -85,14 +85,8 @@ export default function Dashboard() {
                     {...params}
                     label="Search for vibes"
                     placeholder="Favorites"
-                    InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start" sx={{ml:0.2}}>
-                            <SearchIcon />
-                          </InputAdornment>
-                        ),
-                        }}
-                    // sx={{borderWidth:1}}
+                    
+                    // sx={{borderWidth:01}}
                 />
                 
                 )}
