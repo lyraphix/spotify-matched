@@ -68,6 +68,7 @@ export default function Dashboard() {
             alignItems: "center",
             justifyContent: "center",
             direction: "row"
+            
           }}>
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
           <Typography variant="h2Large">Hi, Y/N</Typography>
@@ -92,7 +93,7 @@ export default function Dashboard() {
             {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
             <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ flexGrow: 0.5, flexGrow: 1 }}>
+            <Box sx={{ mb: 3, flexGrow: 0.5, flexGrow: 1 }}>
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
@@ -140,7 +141,7 @@ export default function Dashboard() {
               
             </Box>
             <Box sx={{flexGrow:1}}></Box>
-            <Box item xs={4} sx={{ flexGrow: 8, flexDirection:"row" }}>
+            <Box item xs={4} sx={{ mb: 3, flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
                 fullHeight
@@ -172,7 +173,7 @@ export default function Dashboard() {
 
             </Box>
             <Box sx={{ flexGrow: 1, display: 'flex', flexDirection:"row" }}></Box>
-            <Box sx={{ flexGrow: 8 }}>
+            <Box sx={{ mb: 3, flexGrow: 8 }}>
               <Button
                 fullWidth
                 fullHeight
