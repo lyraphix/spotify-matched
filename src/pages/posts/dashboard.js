@@ -58,21 +58,12 @@ export default function Dashboard() {
       render() {//clean
         makeToolBar(username, avatar)}
 
-      <Box sx={{
+      <Box sx={{ // The Whole Page
         mt: 15,
-        // ml:5,
-        // mr:5,
         mb: 3
-        // ml:20, 
-        // alignItems:"center",
-        // justify:"center", 
-        // direction: "row"
       }}>
-        <Box
+        <Box // Greeting
           sx={{
-            // flexGrow:1,
-            // mt:10, 
-            // ml:5, 
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -81,57 +72,37 @@ export default function Dashboard() {
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
           <Typography variant="h2Large">Hi, Y/N</Typography>
         </Box>
-        {/* <Box
-          sx={{
-            mt: 2,
-            ml: 5,
-            display: 'flex'
-
-          }}>
-
-          <Typography variant="h1">
-            Personalize Top Genres
-          </Typography>
-          {/* <IconButton >
-            <HelpOutlineIcon/>
-          </IconButton> */}
-        {/* </Box>  */}
-        <Box
+        
+        <Box // Buttons
           fullHeight
           sx={{
             mt: 8,
-            ml: 5,
-            mr: 2,
-
             display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
           }}>
+            {/* <Box sx={{ flexGrow: 5, display: 'flex', flexDirection:"column" }}></Box> */}
+
           <Grid
             container
-            spacing={2}
-            // direction= {!window.mobileCheck? "row" : "column"}
             direction= "row"
             justifyContent="space-evenly"
             alignItems="flex-start"
           >
+            {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
+            <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ flexGrow: 5, display: 'flex' }}></Box>
-            <Grid item xs={4} sx={{ flexGrow: 3 }}>
+            <Box sx={{ flexGrow: 3 }}>
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
                 fullHeight
-                // style={{ 
-                //   flexGrow:1}}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'forth.text', backgroundColor:"forth.main", alignItems: "stretch"}}
                 href="/posts/first-post"
-                // style = {{}}
               >
                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                {/* <Typography variant='iconFont'>Your</Typography> */}
                 <Typography variant='iconFont'>Friends</Typography>
                 {/* <CardMedia
                     component="img"
@@ -149,10 +120,10 @@ export default function Dashboard() {
                 //   flexGrow:1}}
                 variant="text"
                 size="medium"
-                sx={{ mt: 3, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
+                sx={{ mt: 1, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
                 href="/posts/vibe-picker"
               >
-                <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 {/* <Paper > */}
                 <Typography variant='iconFont'>Vibe</Typography>
                 <Typography variant='iconFont'>Picker</Typography>
@@ -166,16 +137,16 @@ export default function Dashboard() {
                 /> */}
                 </Grid>
               </Button>
-              {/* <Box  sx={{flexGrow:1, display: 'flex'}}></Box>/ */}
-            </Grid>
-            <Box sx={{ flexGrow: 1 / 2, display: 'flex' }}></Box>
-            <Grid item xs={4} sx={{ flexGrow: 3 }}>
+              
+            </Box>
+            <Box sx={{flexGrow:1}}></Box>
+            <Box item xs={4} sx={{ flexGrow: 8 }}>
               <Button
                 fullWidth
                 fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '374px', flexGrow: 1 }}
+                style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
@@ -199,17 +170,15 @@ export default function Dashboard() {
               </Button>
 
 
-            </Grid>
-            <Box sx={{ flexGrow: 1 / 2, display: 'flex' }}></Box>
-
-
+            </Box>
+            <Box sx={{ flexGrow: 1, display: 'flex', flexDirection:"row" }}></Box>
             <Grid item xs={4} sx={{ flexGrow: 3 }}>
               <Button
                 fullWidth
                 fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '374px', flexGrow: 1 }}
+                style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
                 sx={{ mt: 3, color: 'primary.text', backgroundColor:"primary.main", alignItems: "stretch"}}
@@ -233,7 +202,7 @@ export default function Dashboard() {
                 
               </Button>
             </Grid>
-            <Box sx={{ flexGrow: 1 }}></Box>
+            <Box sx={{ flexGrow: 0.5 }}></Box>
           </Grid>
         </Box>
       </Box>

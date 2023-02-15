@@ -57,7 +57,7 @@ export default function Dashboard() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Typography variant="h2Large">Select your vibe</Typography>
+          <Typography variant="h2Large" fontSize={'3.5rem'}>Select your vibe</Typography>
         </Box>
         <Box
           fullHeight
@@ -88,7 +88,7 @@ export default function Dashboard() {
                 
                 )}
                 
-                sx={{ flexGrow:2, }}
+                sx={{ flexGrow:7, }}
             />
             <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
         </Box>
