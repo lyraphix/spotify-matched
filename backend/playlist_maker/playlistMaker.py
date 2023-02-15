@@ -2,7 +2,8 @@
 Playlist making class, for now helps create a playlist with top 20 tracks
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
-To do: add recommended songs, combine multiple users' songs into a playlist, separate by genre
+To do: remove duplicate songs, combine multiple users' songs into a playlist, separate by genre
+Updated: 2023/02/15 — added 20 recently played songs
 """
 
 import json
@@ -20,6 +21,7 @@ class playlistmaker:
         """
         self.authorizationToken = authorizationToken
         self.playlistid = ""
+        self.playlistsongs = list()
 
     def get_top_tracks(self, limit):
         """Get the top n tracks played by a user
@@ -48,6 +50,16 @@ class playlistmaker:
         tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for track in response_json["items"]]
         return tracks
 
+    def get_recent_tracks(self, limit):
+        """Get the top n tracks played by a user
+        :param limit (int): Number of tracks to get. Should be <= 50
+        :return tracks (list of Track): List of last played tracks
+        """
+        url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
+        response = self._place_get_api_request(url)
+        response_json = response.json()
+        tracks = [Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]) for track in response_json["items"]]
+        return tracks
 
     def get_user_id(self):
         """Get the user ID of user to access their Spotify and create a playlist
@@ -55,22 +67,6 @@ class playlistmaker:
         url = f"https://api.spotify.com/v1/me"
         response = self._place_get_api_request(url)
         response_json = response.json()
-        # json testing for debugging purposes
-        # json_object = json.dumps(response_json)
-        # with open("test.json", "w") as outfile:
-        #     outfile.write(json_object)
-        # f = open('test.json')
-        #
-        # # returns JSON object as
-        # # a dictionary
-        # data = json.load(f)
-        #
-        # # Iterating through the json
-        # # list
-        # for i in data['items']:
-        #     print(i)
-        # Closing file
-        # f.close()
         userid = response_json["id"]
         return userid
 
