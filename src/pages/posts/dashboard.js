@@ -78,7 +78,7 @@ export default function Dashboard() {
           fullHeight
           sx={{
             mt: 11,
-            display: 'flex',
+            // display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
           }}>
