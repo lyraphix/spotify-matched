@@ -2,8 +2,12 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/": "pages/index.js",
   "/posts/first-post": "pages/posts/first-post.js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/posts/dashboard": "pages/posts/dashboard.js"
+=======
+  "/posts/your-match": "pages/posts/your-match.js"
+>>>>>>> 4ffdcb8e40e1964f516039e650212086f060c1df
 }

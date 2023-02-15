@@ -3,7 +3,7 @@ Playlist making class, for now helps create a playlist with top 20 tracks
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
 To do: remove duplicate songs, combine multiple users' songs into a playlist, separate by genre
-Updated: 2023/02/15 — added 20 recently played songs
+Updated: 2023/02/15 — removing duplicates
 """
 
 import json
@@ -21,13 +21,15 @@ class playlistmaker:
         """
         self.authorizationToken = authorizationToken
         self.playlistid = ""
+        # for removing duplicates
         self.playlistsongs = list()
 
-    def get_top_tracks(self, limit):
-        """Get the top n tracks played by a user
+    def get_tracks(self, limit):
+        """Get the top and recent n tracks played by a user
         :param limit (int): Number of tracks to get. Should be <= 50
         :return tracks (list of Track): List of last played tracks
         """
+        # get top tracks first
         url = f"https://api.spotify.com/v1/me/top/tracks?limit={limit}"
         response = self._place_get_api_request(url)
         response_json = response.json()
@@ -48,17 +50,17 @@ class playlistmaker:
         # # Closing file
         # f.close()
         tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for track in response_json["items"]]
-        return tracks
-
-    def get_recent_tracks(self, limit):
-        """Get the top n tracks played by a user
-        :param limit (int): Number of tracks to get. Should be <= 50
-        :return tracks (list of Track): List of last played tracks
-        """
+        # reset the url for recently played
         url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
         response = self._place_get_api_request(url)
         response_json = response.json()
-        tracks = [Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]) for track in response_json["items"]]
+        for track in response_json["items"]:
+            tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
+        # remove duplicates
+        tracks = set(tracks)
+        # bug check
+        # print(tracks)
+        # print(len(tracks))
         return tracks
 
     def get_user_id(self):

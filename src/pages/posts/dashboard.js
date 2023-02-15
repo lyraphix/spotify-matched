@@ -4,7 +4,7 @@ import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { CardMedia, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import { CardMedia, Card, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
@@ -29,7 +29,20 @@ export default function Dashboard() {
   const plist1 = "more placeholders"
   const plist2 = "less placeholders"
 
-
+  const styles = {
+    media: {
+      height: 0,
+      paddingTop: '56.25%' // 16:9
+    },
+    card: {
+      position: 'relative',
+    },
+    overlay: {
+      position: 'absolute',
+      top: '40px',
+      left: '40px'
+    }
+  }
 
   const [an1, setan1] = useState(null);
   const openMenu1 = (event) => {
@@ -78,7 +91,7 @@ export default function Dashboard() {
           fullHeight
           sx={{
             mt: 11,
-            display: 'flex',
+            // display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
           }}>
@@ -93,7 +106,7 @@ export default function Dashboard() {
             {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
             <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ mb: 3, display: 'flex', flexGrow: 0.5, flexGrow: 1 }}>
+            <Box sx={{ mb: 3, flexGrow: 0.5, flexGrow: 1 }}>
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
@@ -141,7 +154,7 @@ export default function Dashboard() {
               
             </Box>
             <Box sx={{flexGrow:1}}></Box>
-            <Box sx={{ mb: 3, display: 'flex', flexGrow: 8, flexDirection:"row" }}>
+            <Box sx={{ mb: 3, flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
                 fullHeight
@@ -151,28 +164,28 @@ export default function Dashboard() {
                 variant="text"
                 size="medium"
                 sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
-                href="/posts/first-post"
+                href="/posts/your-match"
               >
-                <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                {/* <Paper > */}
-                <Typography variant='iconFont'>Your</Typography>
-                <Typography variant='iconFont'>Match</Typography>
-
-                {/* <Image style={{backgroundImage: `url(${"static/src/img/Friends.jpg"})`}}></Image> */}
-                {/* <CardMedia
+                <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                  <Card styles={styles.card}>
+                    <Typography style={styles.overlay} variant='iconFont'>Your Match</Typography>
+                    <CardMedia
+                    styles={styles.media}
+                    sx={{flexGrow: 1}}
                     component="img"
-                    height="130"
-                    image="/static/src/img/friends.png"
+                    height="358"
+                    image="/friends.jpg"
                     alt="Paella dish"
-                /> */}
+                  />
+
+                  </Card>
                 </Grid>
-                
                 
               </Button>
 
 
             </Box>
-            <Box sx={{ flexGrow: 1, display: 'flex', flexDirection:"row" }}></Box>
+            <Box sx={{ flexGrow: 1, flexDirection:"row" }}></Box>
             <Box sx={{ mb: 3, flexGrow: 8 }}>
               <Button
                 fullWidth
@@ -207,117 +220,7 @@ export default function Dashboard() {
           </Grid>
         </Box>
       </Box>
-{/* 
 
-      <Box
-        sx={{
-          // mt: 5,
-          ml: 5,
-          // mb:5,
-          display: 'flex'
-
-        }}>
-        <Typography variant="h1">
-          Connect with your Friends
-        </Typography>
-      </Box> */}
-
-      {/* <Box
-        sx={{
-          mb: 5,
-          // ml: 5,
-          display: 'flex'
-        }}>
-        <Grid
-          container
-          spacing={2}
-          direction="row"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-        >
-          <Grid item xs={2} sx={{ flexGrow: 3 }}>
-            <Button
-              fullWidth
-              fullHeight
-              style={{ minHeight: '130px' }}
-              variant="text"
-              size="medium"
-              sx={{ mt: 3, color: 'info.main', backgroundColor:"third.dark" }}
-              href="/posts/first-post"
-            >
-                <Typography variant='iconFont' letterSpacing={0.5}>{"" + user1}</Typography>
-
-              
-            </Button>
-          </Grid>
-          {/* <Box sx={{flexGrow:1/100}}></Box> */}
-{/* 
-          <Grid item xs={2} sx={{ flexGrow: 3 }}>
-            <Button
-              fullWidth
-              fullHeight
-              style={{ minHeight: '130px' }}
-              variant="text"
-              size="medium"
-              sx={{ mt: 3, color: 'info.main', backgroundColor:"secondary.dark" }}
-              href="/posts/first-post"
-            >
-                <Typography variant='iconFont' letterSpacing={0.5}>{"" + user2}</Typography>
-
-            </Button>
-          </Grid> */}
-          {/* <Box sx={{flexGrow:1/20}}></Box> */}
-{/* 
-          <Grid item xs={2} sx={{ flexGrow: 3 }}>
-            <Button
-              fullWidth
-              fullHeight
-              style={{ minHeight: '130px' }}
-              variant="text"
-              size="medium"
-              sx={{ mt: 3, color: 'info.main', backgroundColor:"primary.dark" }}
-              href="/posts/first-post"
-            >
-                <Typography variant='iconFont' letterSpacing={0.5}>{"" + user3}</Typography>
-
-            </Button>
-          </Grid> */}
-          {/* <Box sx={{flexGrow:1/20}}></Box> */}
-
-          {/* <Grid item xs={2} sx={{ flexGrow: 3 }}>
-            <Button
-              fullWidth
-              fullHeight
-              style={{ minHeight: '130px' }}
-              variant="text"
-              size="medium"
-              sx={{ mt: 3, color: 'info.main', backgroundColor:"secondary.dark" }}
-              href="/posts/first-post"
-            >
-                <Typography variant='iconFont' letterSpacing={0.5}>{"" + user4}</Typography>
-
-            </Button>
-          </Grid> */}
-          {/* <Box sx={{flexGrow:1/20}}></Box> */}
-
-          {/* <Grid item xs={2} sx={{ flexGrow: 3 }}>
-            <Button
-              fullWidth
-              fullHeight
-              style={{ minHeight: '130px' }}
-              variant="text"
-              size="medium"
-              sx={{ mt: 3, color: 'info.main', backgroundColor:"third.dark"}}
-              href="/posts/first-post"
-            >
-                <Typography variant='iconFont' letterSpacing={0.5}>{"" + user5}</Typography>
-
-            </Button> */}
-          {/* </Grid>  */}
-          {/* <Box sx={{flexGrow:1/10}}></Box> */}
-
-        {/* </Grid>
-      </Box> */}
     </Container>
   )
 }

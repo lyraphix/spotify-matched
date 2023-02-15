@@ -11,21 +11,19 @@ from playlistMaker import playlistmaker
 # pretend password: hahanerd
 
 def main():
-    auth = "BQBlFYSehmUJV2g0hpTKccjMs3rmi0jnLaWVU4C95zaRbnzQ8KRVeWhs42d9AS9U4qvCKgKTYN2U7eCmSthUtnA1JY6EzmIEARYGYXfRe-jUlDdFXi-r6ZQD6EowDitwNOtmDpu8v4nVEnpdEI42DycEzbc3-7BJS1AMZoxEx-tZqYRCVJMCZSXsJ629JyCmjTGJnOzja5Itkc0uhwUl5CN33Zyr2JnkCJrtwRwOEwgQjKriqjXvmzLFnVeCMPthot6kx8Ada2ae85aIsZligqTXPczG7Kw6IZeUV_YUPDWf9h4wtpZnvs3iDfc"
+    auth = "BQCe3jokh3Mv--eoAjBQ8FvL4MJgROCB24U_61GZqb49efppmtyXH9yoQ-fjMGGhKNVEZonC2Lwd8EhX4fMcozffV8LPETKKcAzU-nvF3Cj_f8CC33EDWdrrvikoEwkecuUdF-bZK9P397hJpmg06djSCsBqIlXfZ6i_TxuKYzQdaa9mrf4FQUFGy6xUJJooWX7RiqcuxTdmWNf-mKACwjNgW_X1iCIEER7must0wXebj2R59Bsqq-zYUcaTdVkqiwz1i9xNIzaqlT0bJjvB-bGfZAERrIG45Mqm6wKy85RbpHZQffrzDvkuhNc"
     pm = playlistmaker(auth)
     # os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
 
-    # get last played tracks
+    # get tracks
     num_tracks = 20
-    top_tracks = pm.get_top_tracks(num_tracks)
-    recent_tracks = pm.get_recent_tracks(num_tracks)
+    tracks = pm.get_tracks(num_tracks)
 
     # get playlist name from user and create playlist
     playlist = pm.create_playlist("Test")
 
     # populate playlist with recommended tracks
-    pm.populate_playlist(playlist, top_tracks)
-    pm.populate_playlist(playlist, recent_tracks)
+    pm.populate_playlist(playlist, tracks)
 
     # get link to playlist
     link = pm.get_playlist_link()

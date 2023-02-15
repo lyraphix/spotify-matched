@@ -30,6 +30,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
     "/posts/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -39,6 +40,12 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/posts/first-post.js"
+=======
+    "/posts/your-match": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/posts/your-match.js"
+>>>>>>> 4ffdcb8e40e1964f516039e650212086f060c1df
     ]
   },
   "ampFirstPages": []
