@@ -3,7 +3,7 @@
 // import { Card, Row, Text, Input, Spacer, Button } from "@nextui-org/react";
 import { Divider, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, createTheme, ThemeProvider, Button, Link} from "@mui/material/";
 import { Card } from "@nextui-org/react";
-import {useSession, signIn, signOut} from 'next-auth/react';
+// import {useSession, signIn, signOut} from 'next-auth/react';
 // const inter = Inter({ subsets: ['latin'] })
 //  const signedIn = false;
 //  const username = "";
@@ -201,7 +201,7 @@ export default function FirstPost() {
                 sx={{ mt: 3, mb: 2 }}
                 href="/posts/dashboard"
               >
-                Login with 
+                Login with Spotify
               </Button>
               <Box
               sx={{

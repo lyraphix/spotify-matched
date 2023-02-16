@@ -167,18 +167,18 @@ export default function Dashboard() {
                 href="/posts/your-match"
               >
                 <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                  <Card styles={styles.card}>
+                  {/* {/* <Card styles={styles.card}> */}
                     <Typography style={styles.overlay} variant='iconFont'>Your Match</Typography>
-                    <CardMedia
+                    {/* <CardMedia
                     styles={styles.media}
                     sx={{flexGrow: 1}}
                     component="img"
                     height="358"
                     image="/friends.jpg"
                     alt="Paella dish"
-                  />
+                  /> */}
 
-                  </Card>
+                  {/* </Card>  */}
                 </Grid>
                 
               </Button>
