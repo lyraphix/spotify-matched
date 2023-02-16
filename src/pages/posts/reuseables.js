@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import SettingsIcon from '@mui/icons-material/Settings';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
-import MessageIcon from '@mui/icons-material/Message';
 import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 const makeToolBar = function (username, avatar) {
@@ -32,7 +32,7 @@ const makeToolBar = function (username, avatar) {
 
         <Box >
             <AppBar position="fixed">
-                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.5, borderColor: "divider"}}>
+                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
 
                     {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
@@ -40,20 +40,11 @@ const makeToolBar = function (username, avatar) {
                         anchor='left'
                         open={Boolean(anchorDrawer)}
                         onClose={closeDrawer}
-                        PaperProps={{
-                            sx: {
-                              backgroundColor: "black",
-                              color: "white",
-                              width: 180
-                            }
-                          }}
-                        // sx={{color:"background.main"}}
+                        
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        {/* <Toolbar sx={{height: 4}}></Toolbar> */}
-                          
-                        <Box sx={{mt:2, backgroundColor:"background.main"}}>
-                            <List sx={{ml:1}}>
+                        <Box >
+                            <List >
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
                                         <ListItemIcon>
@@ -70,6 +61,14 @@ const makeToolBar = function (username, avatar) {
                                         <ListItemText primary={"Search"} />
                                     </ListItemButton>
                                 </ListItem>
+                                <ListItem key={"Settings"} disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <SettingsIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary={"Settings"} />
+                                    </ListItemButton>
+                                </ListItem>
                                 <ListItem key={"Friends"} disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
@@ -78,39 +77,31 @@ const makeToolBar = function (username, avatar) {
                                         <ListItemText primary={"Friends"} />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Messages"} disablePadding>
-                                    <ListItemButton>
-                                        <ListItemIcon>
-                                            <MessageIcon />
-                                        </ListItemIcon>
-                                        <ListItemText primary={"Messages"} />
-                                    </ListItemButton>
-                                </ListItem>
                             </List>
                             <Divider sx={{height:0.1, width: 1}}/>
-                            <List sx={{ml:1}}>
-                                <ListItem key={"Create Playlist"} disablePadding>
+                            <List>
+                                <ListItem key={"Create Playlist"}>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Your Playlists"}  />
+                                        <ListItemText primary={"Your Playlists"} disablePadding />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Matched Playlist"} disablePadding>
+                                <ListItem key={"Matched Playlist"} >
                                     <ListItemButton >
                                         {/* <ListItemIcon>
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */} 
-                                        <ListItemText primary={"Matched Playlist"} />
+                                        <ListItemText primary={"Matched Playlist"} disablePadding />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Episodes"} disablePadding>
+                                <ListItem key={"Episodes"} >
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Episodes"} />
+                                        <ListItemText primary={"Episodes"} disablePadding/>
                                     </ListItemButton>
                                 </ListItem>
 
@@ -141,6 +132,7 @@ const makeToolBar = function (username, avatar) {
                     >
                         <MenuItem ><Link href="/posts/profile" underline="none" color="white">{'Profile'}</Link></MenuItem>
                         <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
+                        <MenuItem ><Link href="/posts/generalSettings" underline="none" color="white">{'Settings'}</Link></MenuItem>
                     </Menu>
 
                 </Toolbar>
@@ -153,3 +145,6 @@ const makeToolBar = function (username, avatar) {
 
 }
 export default makeToolBar;
+
+//<Box sx={{ ml: 1, flexGrow: 1, display: 'flex' }}></Box>
+//<Box sx={{ mt: 3, flexGrow: 1, display: 'flex' }}></Box>
