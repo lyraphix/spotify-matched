@@ -50,7 +50,8 @@ class playlistmaker:
         # # Closing file
         # f.close()
         tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for track in response_json["items"]]
-        # reset the url for recently played
+
+        # reset the url to get recently played tracks
         url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
         response = self._place_get_api_request(url)
         response_json = response.json()
@@ -59,6 +60,9 @@ class playlistmaker:
         # remove duplicates
         tracks = set(tracks)
         # bug check
+        # print("Tracks:")
+        # for i in tracks:
+        #     print(i.name)
         # print(tracks)
         # print(len(tracks))
         return tracks

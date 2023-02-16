@@ -11,7 +11,7 @@ from playlistMaker import playlistmaker
 # pretend password: hahanerd
 
 def main():
-    auth = "BQCe3jokh3Mv--eoAjBQ8FvL4MJgROCB24U_61GZqb49efppmtyXH9yoQ-fjMGGhKNVEZonC2Lwd8EhX4fMcozffV8LPETKKcAzU-nvF3Cj_f8CC33EDWdrrvikoEwkecuUdF-bZK9P397hJpmg06djSCsBqIlXfZ6i_TxuKYzQdaa9mrf4FQUFGy6xUJJooWX7RiqcuxTdmWNf-mKACwjNgW_X1iCIEER7must0wXebj2R59Bsqq-zYUcaTdVkqiwz1i9xNIzaqlT0bJjvB-bGfZAERrIG45Mqm6wKy85RbpHZQffrzDvkuhNc"
+    auth = "BQAv1lpFoidaAACqfq6Au5TXvhGtJY3xpXgiFPH1BiRTvUnj--Y5LbAWuaz0pTSO7ttCpS25iI572L0rdU3U9jeFtx6a1FQIQwHEm23hV8agZETmo136ZiiKMpSadlFpntvAK_SyEmCJdtY9Z2NckquQ69Rn_49-P8-5L10FYHaFDAnAbuwqLSP_xNIATEZHH8zB_PUNCZeNuV4MNUl6jwkOsZvnXoTsBzJRWTHNKrPwZWNm2uFb9xnqcVeM-yd5wFKaG3Uu4luL8buvtmaTePw5_eTHorvry2XInA"
     pm = playlistmaker(auth)
     # os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
 
