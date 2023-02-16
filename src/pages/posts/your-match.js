@@ -12,8 +12,7 @@ import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
-const [setLink, getData] = useState(null)
-
+ 
 function getData() {
   axios({
     method: "GET",
