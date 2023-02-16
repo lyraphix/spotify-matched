@@ -11,6 +11,7 @@ from playlistMaker import playlistmaker
 # pretend password: hahanerd
 
 def main():
+    # replace auth with own authentication code (expires every hour)
     auth = "BQAv1lpFoidaAACqfq6Au5TXvhGtJY3xpXgiFPH1BiRTvUnj--Y5LbAWuaz0pTSO7ttCpS25iI572L0rdU3U9jeFtx6a1FQIQwHEm23hV8agZETmo136ZiiKMpSadlFpntvAK_SyEmCJdtY9Z2NckquQ69Rn_49-P8-5L10FYHaFDAnAbuwqLSP_xNIATEZHH8zB_PUNCZeNuV4MNUl6jwkOsZvnXoTsBzJRWTHNKrPwZWNm2uFb9xnqcVeM-yd5wFKaG3Uu4luL8buvtmaTePw5_eTHorvry2XInA"
     pm = playlistmaker(auth)
     # os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
