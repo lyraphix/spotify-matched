@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
+import axios from "axios";
 import { Inter, Open_Sans } from '@next/font/google'
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,8 +12,19 @@ import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
+const [setLink, getData] = useState(null)
 
-
+function getData() {
+  axios({
+    method: "GET",
+    url:"/profile",
+  })
+  .then((response) => {
+    const res = response.data
+    setLink(({
+      link: res.link}))
+  })
+}
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 export default function Dashboard() {
@@ -73,7 +85,11 @@ export default function Dashboard() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Link >link</Link>
+            <p>To get your profile details: </p><button onClick={getData}>Click me</button>
+        {profileData && <div>
+              <p>Link: {profileData.link}</p>
+            </div>
+        }
         </Box>
         
         </Box>

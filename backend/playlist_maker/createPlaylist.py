@@ -10,9 +10,9 @@ from playlistMaker import playlistmaker
 # pretend account for vercel: qwertyay@gmail.com
 # pretend password: hahanerd
 
-def main():
+def main(oauth):
     # replace auth with own authentication code (expires every hour)
-    auth = "BQAv1lpFoidaAACqfq6Au5TXvhGtJY3xpXgiFPH1BiRTvUnj--Y5LbAWuaz0pTSO7ttCpS25iI572L0rdU3U9jeFtx6a1FQIQwHEm23hV8agZETmo136ZiiKMpSadlFpntvAK_SyEmCJdtY9Z2NckquQ69Rn_49-P8-5L10FYHaFDAnAbuwqLSP_xNIATEZHH8zB_PUNCZeNuV4MNUl6jwkOsZvnXoTsBzJRWTHNKrPwZWNm2uFb9xnqcVeM-yd5wFKaG3Uu4luL8buvtmaTePw5_eTHorvry2XInA"
+    auth = oauth
     pm = playlistmaker(auth)
     # os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
 
@@ -28,7 +28,8 @@ def main():
 
     # get link to playlist
     link = pm.get_playlist_link()
-    print(link)
+    
+    return link
 
 if __name__ == "__main__":
     main()
