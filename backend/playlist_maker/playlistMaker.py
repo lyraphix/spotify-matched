@@ -24,7 +24,32 @@ class playlistmaker:
         # for removing duplicates
         self.playlistsongs = list()
 
-    def get_tracks(self, limit, requested_genres):
+    # duplicate function for site testing purposes
+    def get_tracks(self, limit):
+        """Get the top and recent n tracks played by a user
+        :param limit (int): Number of tracks to get. Should be <= 50
+        :return tracks (list of Track): List of last played tracks
+        """
+        # get top tracks first
+        url = f"https://api.spotify.com/v1/me/top/tracks?limit={limit}"
+        response = self._place_get_api_request(url)
+        response_json = response.json()
+        tracks = list()
+        for track in response_json["items"]:
+            tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
+
+        # reset the url to get recently played tracks
+        url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
+        response = self._place_get_api_request(url)
+        response_json = response.json()
+        for track in response_json["items"]:
+            tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
+        # remove duplicates
+        tracks = set(tracks)
+        return tracks
+
+
+    def get_tracks_genre_filter(self, limit, requested_genres):
         """Get the top and recent n tracks played by a user
         :param limit (int): Number of tracks to get. Should be <= 50
         :param requested_genres (list): list of requested genres user wants
@@ -67,12 +92,6 @@ class playlistmaker:
                 tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
         # remove duplicates
         tracks = set(tracks)
-        # bug check
-        # print("Tracks:")
-        # for i in tracks:
-        #     print(i.name)
-        # print(tracks)
-        # print(len(tracks))
         return tracks
 
     def get_user_id(self):
@@ -109,12 +128,13 @@ class playlistmaker:
 
     # since apparently getting the track genre is broken
     def match_artist_genre(self, artist, requested_genres):
-        """ Gets artists' genres and sees if it matches with the requested genres
+        """Gets artists' genres and sees if it matches with the requested genres
         :param artist: artist id
         :param requested_genres: list of requested genres
         :return: True if artists' genres is in the requested, False if otherwise
         """
-        # track_id = "1fdlTXD7obDyqOpx96BEL9" Maison
+        # testing purposes
+        # track_id = "1fdlTXD7obDyqOpx96BEL9" — Maison
         # 5NK2NHvmKLOn8V3eBYDaKm July 7th
         url = f"https://api.spotify.com/v1/artists/{artist}"
         response = self._place_get_api_request(url)
@@ -124,11 +144,7 @@ class playlistmaker:
             if artist_genre in requested_genres:
                 return True
         return False
-        # json_object = json.dumps(response_json)
-        # with open("test.json", "w") as outfile:
-        #     outfile.write(json_object)
 
-    
 
     def populate_playlist(self, playlist, tracks):
         """Add tracks to a playlist.

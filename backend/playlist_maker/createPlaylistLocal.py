@@ -21,7 +21,7 @@ def main():
 
     # get tracks
     num_tracks = 50 # limit is 50 for recently played
-    tracks = pm.get_tracks(num_tracks, genres)
+    tracks = pm.get_tracks_genre_filter(num_tracks, genres)
 
     # get playlist name from user and create playlist
     playlist = pm.create_playlist("Test")
