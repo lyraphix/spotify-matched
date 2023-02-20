@@ -3,7 +3,7 @@ Playlist making class, for now helps create a playlist with top 20 tracks
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
 To do: remove duplicate songs, combine multiple users' songs into a playlist, separate by genre
-Updated: 2023/02/15 — removing duplicates
+Updated: 2023/02/20 — divide by genre
 """
 
 import json
@@ -24,9 +24,10 @@ class playlistmaker:
         # for removing duplicates
         self.playlistsongs = list()
 
-    def get_tracks(self, limit):
+    def get_tracks(self, limit, requested_genres):
         """Get the top and recent n tracks played by a user
         :param limit (int): Number of tracks to get. Should be <= 50
+        :param requested_genres (list): list of requested genres user wants
         :return tracks (list of Track): List of last played tracks
         """
         # get top tracks first
@@ -49,14 +50,21 @@ class playlistmaker:
         #     print(i)
         # # Closing file
         # f.close()
-        tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for track in response_json["items"]]
+        tracks = list()
+        # separate by genre
+        for track in response_json["items"]:
+            artist_id = track["artists"][0]["id"]
+            if self.match_artist_genre(artist_id, requested_genres):
+                tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
 
         # reset the url to get recently played tracks
         url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
         response = self._place_get_api_request(url)
         response_json = response.json()
         for track in response_json["items"]:
-            tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
+            artist_id = track["track"]["artists"][0]["id"]
+            if self.match_artist_genre(artist_id, requested_genres):
+                tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
         # remove duplicates
         tracks = set(tracks)
         # bug check
@@ -98,6 +106,28 @@ class playlistmaker:
 
         playlist = Playlist(name, playlist_id)
         return playlist
+
+    # since apparently getting the track genre is broken
+    def match_artist_genre(self, artist, requested_genres):
+        """ Gets artists' genres and sees if it matches with the requested genres
+        :param artist: artist id
+        :param requested_genres: list of requested genres
+        :return: True if artists' genres is in the requested, False if otherwise
+        """
+        # track_id = "1fdlTXD7obDyqOpx96BEL9" Maison
+        # 5NK2NHvmKLOn8V3eBYDaKm July 7th
+        url = f"https://api.spotify.com/v1/artists/{artist}"
+        response = self._place_get_api_request(url)
+        response_json = response.json()
+        artist_genres = response_json["genres"]
+        for artist_genre in artist_genres:
+            if artist_genre in requested_genres:
+                return True
+        return False
+        # json_object = json.dumps(response_json)
+        # with open("test.json", "w") as outfile:
+        #     outfile.write(json_object)
+
     
 
     def populate_playlist(self, playlist, tracks):
