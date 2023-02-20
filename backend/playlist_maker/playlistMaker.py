@@ -2,7 +2,7 @@
 Playlist making class, for now helps create a playlist with top 20 tracks
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
-To do: remove duplicate songs, combine multiple users' songs into a playlist, separate by genre
+To do: combine multiple users' songs into a playlist, separate by genre (with possibly more songs)
 Updated: 2023/02/20 — divide by genre
 """
 
