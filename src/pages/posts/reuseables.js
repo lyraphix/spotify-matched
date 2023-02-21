@@ -40,11 +40,17 @@ const makeToolBar = function (username, avatar) {
                         anchor='left'
                         open={Boolean(anchorDrawer)}
                         onClose={closeDrawer}
-                        
+                        sx ={{color: "black"}}
+                        PaperProps={{
+                            sx: {
+                              backgroundColor: "black",
+                              color: "divider",
+                            }
+                        }}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box >
-                            <List >
+                        <Box sx ={{mt: 3}}>
+                            <List sx ={{ml: 1}}>
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
                                         <ListItemIcon>
@@ -79,29 +85,29 @@ const makeToolBar = function (username, avatar) {
                                 </ListItem>
                             </List>
                             <Divider sx={{height:0.1, width: 1}}/>
-                            <List>
-                                <ListItem key={"Create Playlist"}>
+                            <List sx ={{ml: 1}}>
+                                <ListItem key={"Create Playlist"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Your Playlists"} disablePadding />
+                                        <ListItemText primary={"Your Playlists"}  />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Matched Playlist"} >
+                                <ListItem key={"Matched Playlist"} disablePadding>
                                     <ListItemButton >
                                         {/* <ListItemIcon>
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */} 
-                                        <ListItemText primary={"Matched Playlist"} disablePadding />
+                                        <ListItemText primary={"Matched Playlist"}  />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Episodes"} >
+                                <ListItem key={"Episodes"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Episodes"} disablePadding/>
+                                        <ListItemText primary={"Episodes"} />
                                     </ListItemButton>
                                 </ListItem>
 
@@ -131,8 +137,9 @@ const makeToolBar = function (username, avatar) {
                         onClose={closeMenu}
                     >
                         <MenuItem ><Link href="/posts/profile" underline="none" color="white">{'Profile'}</Link></MenuItem>
-                        <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
+                        
                         <MenuItem ><Link href="/posts/generalSettings" underline="none" color="white">{'Settings'}</Link></MenuItem>
+                        <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
                     </Menu>
 
                 </Toolbar>
@@ -148,3 +155,4 @@ export default makeToolBar;
 
 //<Box sx={{ ml: 1, flexGrow: 1, display: 'flex' }}></Box>
 //<Box sx={{ mt: 3, flexGrow: 1, display: 'flex' }}></Box>
+
