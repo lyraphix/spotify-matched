@@ -14,7 +14,7 @@ import { topTracks } from './spotify';
 
 import Head from "next/head";
 import { useState } from "react"; 
-import 
+ 
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -36,22 +36,22 @@ export default function Home() {
 
 
   const fetchTopTracks = async () => {
+   
     const response = await fetch("/api/top-tracks");
-    const trackData = await response.json();
-
-    fs.writeFile("test.txt", trackData, function(err) {
-        if (err) {
-            console.log(err);
-        }
-    });
+    
+    return response
   };
   
-
+  const data = fetchTopTracks();
+  console.log(fetchTopTracks)
+  console.log('yuop')
+  console.log(fetchTopTracks.response)
   return (
         <div>
         <main>
-          <button onClick={fetchTopTracks}>Get top tracks</button>
-          
+        <button id = 'demo' onClick={fetchTopTracks}>
+        
+        </button>
         </main>
         </div>
       );
