@@ -91,7 +91,7 @@ export default function Dashboard() {
           fullHeight
           sx={{
             mt: 11,
-            // display: 'flex',
+            display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
           }}>
@@ -102,39 +102,48 @@ export default function Dashboard() {
             direction= "row"
             justifyContent="space-evenly"
             alignItems="flex-start"
+            sx ={{display: 'flex',}}
+
           >
             {/* <Box sx={{ flexGrow: 5, display: 'flex' }}></Box> */}
             <Box sx={{ flexGrow: 0.5 }}></Box>
 
-            <Box sx={{ mb: 3, flexGrow: 0.5, flexGrow: 1 }}>
+            <Box sx={{ mb: 0.5, flexGrow: 0.5, flexGrow: 1 }}>
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
                 fullHeight
                 variant="text"
                 size="medium"
-                sx={{ mt: 0, color: 'forth.text', backgroundColor:"forth.main", alignItems: "stretch"}}
+                sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down"}}
                 href="/posts/first-post"
               >
-                <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                <Typography variant='iconFont'>Friends</Typography>
+                {/* <Grid direction= "column" sx={{flexGrow:1, display: 'flex', alignItems: "end", direction: "column", justifyContent: "center", objectFit: "cover"}}> */}
+                <Typography variant='iconFont' style={styles.overlay}>Friends</Typography>
                 {/* <CardMedia
                     component="img"
                     height="130"
                     image="/static/src/img/friends.png"
                     alt="Paella dish"
                 /> */}
-                </Grid>
+                 <img
+                    sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                    component="img"
+                    height="90"
+                    src="/friends.jpg"
+                    // alt="Paella dish"
+                  />
+                {/* </Grid>s */}
               </Button>
               <Button
-                style={{ minHeight: '200px', flexGrow: 3 }}
+                style={{ minHeight: '205px', flexGrow: 3 }}
                 fullWidth
                 fullHeight
                 // style={{ 
                 //   flexGrow:1}}
                 variant="text"
                 size="medium"
-                sx={{ mt: 1, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
+                sx={{ mt: 0.5, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
                 href="/posts/vibe-picker"
               >
                 <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
@@ -154,7 +163,7 @@ export default function Dashboard() {
               
             </Box>
             <Box sx={{flexGrow:1}}></Box>
-            <Box sx={{ mb: 3, flexGrow: 8, flexDirection:"row" }}>
+            <Box sx={{ mb: 0.5, flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
                 fullHeight
@@ -163,30 +172,23 @@ export default function Dashboard() {
                 style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch" }}
+                sx={{ mt: 0, color: 'forth.text', backgroundColor:"forth.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down" }}
                 href="/posts/your-match"
-              >
-                <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
-                  <Card styles={styles.card}>
+                >
+                  {/* <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "end", direction: "column", justifyContent: "center", objectFit: "cover"}}>
+                  <Card styles={styles.card}> */}
+                   
                     <Typography style={styles.overlay} variant='iconFont'>Your Match</Typography>
-                    <CardMedia
-                    styles={styles.media}
-                    sx={{flexGrow: 1}}
-                    component="img"
-                    height="358"
-                    image="/friends.jpg"
-                    alt="Paella dish"
-                  />
 
-                  </Card>
-                </Grid>
+                  {/* </Card>  */}
+                {/* </Grid> */}
                 
               </Button>
 
 
             </Box>
             <Box sx={{ flexGrow: 1, flexDirection:"row" }}></Box>
-            <Box sx={{ mb: 3, flexGrow: 8 }}>
+            <Box sx={{ mb: 0.5, flexGrow: 8 }}>
               <Button
                 fullWidth
                 fullHeight
@@ -224,3 +226,4 @@ export default function Dashboard() {
     </Container>
   )
 }
+
