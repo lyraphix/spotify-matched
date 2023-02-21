@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
         text: "white"
       },
       secondary: {
-        main: '#043D7A',
+        main: '#9BB9D8',
         light: '#92AFCE',
         dark: '#0C233B',
         text: "white"
