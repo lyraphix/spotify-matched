@@ -36,7 +36,7 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
-  secret: process.env.JWT_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async jwt({ token, account, user }){
         //initial sign in
