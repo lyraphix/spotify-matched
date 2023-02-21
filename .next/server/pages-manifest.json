@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/index4": "pages/index4.js",
-  "/index2": "pages/index2.js",
-  "/spotify": "pages/spotify.js"
+  "/posts/newaccount": "pages/posts/newaccount.js"
 }

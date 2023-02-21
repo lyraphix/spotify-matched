@@ -14,8 +14,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
-export default function Dashboard() {
 
+export const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+export default function Dashboard() {
   const avatar = ""
   const username = ""
 
@@ -76,19 +77,19 @@ export default function Dashboard() {
         mb: 3
       }}>
         <Box // Greeting
+        
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             direction: "row"
-            
           }}>
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
           <Typography variant="h2Large">Hi, Y/N</Typography>
         </Box>
         
         <Box // Buttons
-          fullHeight
+          // fullHeight
           sx={{
             mt: 11,
             display: 'flex',
@@ -112,14 +113,13 @@ export default function Dashboard() {
               <Button
                 style={{ minHeight: '150px', flexGrow: 1}}
                 fullWidth
-                fullHeight
+                // fullHeight
                 variant="text"
                 size="medium"
-                sx={{ mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down"}}
+            sx={{ direction: 'column',   justifyContent: "center",  mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down"}}
                 href="/posts/first-post"
               >
                 {/* <Grid direction= "column" sx={{flexGrow:1, display: 'flex', alignItems: "end", direction: "column", justifyContent: "center", objectFit: "cover"}}> */}
-                <Typography variant='iconFont' style={styles.overlay}>Friends</Typography>
                 {/* <CardMedia
                     component="img"
                     height="130"
@@ -129,16 +129,18 @@ export default function Dashboard() {
                  <img
                     sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
                     component="img"
-                    height="90"
+                    height="60"
                     src="/friends.jpg"
                     // alt="Paella dish"
                   />
+                <Typography variant='iconFont' >Friends</Typography>
+
                 {/* </Grid>s */}
               </Button>
               <Button
                 style={{ minHeight: '205px', flexGrow: 3 }}
                 fullWidth
-                fullHeight
+                // fullHeight
                 // style={{ 
                 //   flexGrow:1}}
                 variant="text"
@@ -166,7 +168,7 @@ export default function Dashboard() {
             <Box sx={{ mb: 0.5, flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
-                fullHeight
+                // fullHeight
                 // style={{ 
                 //   flexGrow:1}}
                 style={{ minHeight: '358px', flexGrow: 1 }}
@@ -191,7 +193,7 @@ export default function Dashboard() {
             <Box sx={{ mb: 0.5, flexGrow: 8 }}>
               <Button
                 fullWidth
-                fullHeight
+                // fullHeight
                 // style={{ 
                 //   flexGrow:1}}
                 style={{ minHeight: '358px', flexGrow: 1 }}

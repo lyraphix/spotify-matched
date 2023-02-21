@@ -96,7 +96,7 @@ export default function FirstPost() {
           <CssBaseline />   
           <Box
           sx={{
-              marginTop: 10,
+              marginTop: 5,
               marginButtom: 10,
               display: 'flex',
               flexDirection: 'column',
@@ -186,8 +186,8 @@ export default function FirstPost() {
               <Grid container justifyContent="flex-end">
                 <Grid item>
                 <Typography variant='h3' color="info.main">
-                  <Link href="/" >
-                    {'Back to last page'}
+                  <Link href="/posts/newaccount" >
+                    {'Create an account'}
                   </Link>
                   </Typography>
                 </Grid>

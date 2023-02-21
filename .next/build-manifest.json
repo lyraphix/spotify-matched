@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/404": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/404.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,20 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/index2": [
+    "/posts/newaccount": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index2.js"
-    ],
-    "/index4": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index4.js"
-    ],
-    "/spotify": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/spotify.js"
+      "static/chunks/pages/posts/newaccount.js"
     ]
   },
   "ampFirstPages": []

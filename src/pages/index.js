@@ -54,7 +54,7 @@ export default function Home() {
                          <Button
                                variant="contained"
                                size = "medium"
-                               href="/posts/first-post"
+                               href="/posts/newaccount"
                            >
                                Sign Up
                          </Button>
