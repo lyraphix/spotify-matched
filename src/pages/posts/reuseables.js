@@ -32,7 +32,9 @@ const makeToolBar = function (username, avatar) {
 
         <Box >
             <AppBar position="fixed">
-                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
+                {/* <Toolbar sx={{height: 90, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}> */}
+                <Toolbar sx={{height: 90, backgroundColor:"background.default"}}>
+
 
                     {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
@@ -49,7 +51,7 @@ const makeToolBar = function (username, avatar) {
                         }}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box sx ={{mt: 3}}>
+                        <Box sx ={{width: 80, mt: 3}}>
                             <List sx ={{ml: 1}}>
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
@@ -121,9 +123,20 @@ const makeToolBar = function (username, avatar) {
                         {/* <Typography variant='h1' sx={{ ml: 2}}>
               Spotify
             </Typography> */}
-                        <Typography variant='h2' sx={{ flexGrow: 3 }}>
+                        {/* <Typography variant='h2' sx={{ flexGrow: 3 }}>
                             MATCHED
-                        </Typography>
+                        </Typography> */}
+                         <Button
+                            href="/"
+                            >
+                            <img
+                                sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                                component="img"
+                                height="60"
+                                src="/icon.png"
+                                // alt="Paella dish"
+                            />
+                        </Button>
                     </Box>
                     <Button onClick={openMenu}>
                         <Avatar alt={username} src={avatar} />

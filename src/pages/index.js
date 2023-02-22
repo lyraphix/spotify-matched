@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import { AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import { ImageButton, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 
 // import { Formik, field, form} from 'formik'
@@ -35,13 +35,30 @@ export default function Home() {
       <CssBaseline />  
       <Box >
                <AppBar position="fixed" >
-                  <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
+                  {/* <Toolbar sx={{height: 100, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}> */}
+                  <Toolbar sx={{height: 110, backgroundColor:"background.default"}}>
+                      {/* <Box sx = {{flexGrow: 1}}></Box> */}
                          {/* <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
                          </Typography> */}
-                         <Typography variant='h2' sx={{ flexGrow: 13 }}>
-                           MATCHED
-                         </Typography>
+                         <Button
+                            href="/"
+                            >
+                            
+                        {/* <Image> */}
+                            <img
+                                sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                                component="img"
+                                height="80"
+                                src="/logo.jpg"
+                                // alt="Paella dish"
+                            />
+                        {/* </Image> */}
+                        </Button>
+                        <Box style={{
+                                // width: image.width,
+                                flex:13
+                            }}></Box>
                    {/* </Box> */}
                          <Button
                                variant="text"

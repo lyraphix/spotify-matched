@@ -91,7 +91,7 @@ export default function Dashboard() {
         <Box // Buttons
           // fullHeight
           sx={{
-            mt: 11,
+            mt: 8,
             display: 'flex',
             flexGrow: 1,
             flexDirection: "column"
@@ -148,7 +148,7 @@ export default function Dashboard() {
                 sx={{ mt: 0.5, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
                 href="/posts/vibe-picker"
               >
-                <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                <Grid container direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 {/* <Paper > */}
                 <Typography variant='iconFont'>Vibe</Typography>
                 <Typography variant='iconFont'>Picker</Typography>
@@ -199,10 +199,10 @@ export default function Dashboard() {
                 style={{ minHeight: '358px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 0, color: 'primary.text', backgroundColor:"primary.main", alignItems: "stretch"}}
+                sx={{ mt: 0, color: 'primary.text', backgroundColor:"primary.mainPage", alignItems: "stretch"}}
                 href="/posts/first-post"
               >
-                 <Grid direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                 <Grid container direction= "column" sx={{mt:2, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 {/* <Paper > */}
                 <Typography variant='iconFont'>Match</Typography>
                 <Typography variant='iconFont'>With</Typography>

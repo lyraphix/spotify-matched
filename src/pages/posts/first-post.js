@@ -14,7 +14,8 @@ export default function FirstPost() {
     palette: {
       mode: 'light',
       primary: {
-        main: '#608108',
+        // main: '#608108',
+        main: '#3eb575',
         light: '#B5C68C',
         dark: '#394221',
       },
@@ -96,15 +97,15 @@ export default function FirstPost() {
           <CssBaseline />   
           <Box
           sx={{
-              marginTop: 5,
-              marginButtom: 10,
+              marginTop: 3,
+              marginButtom: 2,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               // backgroundColor: 'primary.light',
             }}>    
             <Box sx={{
-              margin: 5,
+              margin: 3,
               display: 'flex',
               flexDirection: 'row',
             }}>
@@ -112,9 +113,22 @@ export default function FirstPost() {
               {/* <Typography variant='h1' color={"white"}>
                 Spotify
               </Typography> */}
-              <Typography variant='h2' color={"white"}>
+              {/* <Typography variant='h2' color={"white"}>
                 MATCHED
-              </Typography>
+              </Typography> */}
+              <Button
+                            href="/"
+                            >
+                        {/* <Image> */}
+                            <img
+                                sx={{mt: 5, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                                component="img"
+                                height="100"
+                                src="/logo.jpg"
+                                // alt="Paella dish"
+                            />
+                        {/* </Image> */}
+                        </Button>
               <></>
             </Box>
           <Card

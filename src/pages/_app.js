@@ -10,7 +10,8 @@ export default function App({ Component, pageProps }) {
     palette: {
       mode: 'dark',
       primary: {
-        main: '#608108',
+        main: '#3eb575',
+        mainPage: '#47A85A',
         light: '#B5C68C',
         dark: '#394221',
         text: "white"
