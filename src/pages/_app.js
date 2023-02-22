@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }) {
         fontSize: '2rem',
         fontWeight: 150,
         fontStretch: "condensed",
-        fontFamily: "cursive",
+        // fontFamily: "cursive",
       },
       iconFont: {
         // fontFamily: `"Gill Sans", sans-serif`,
@@ -82,7 +82,7 @@ export default function App({ Component, pageProps }) {
         fontSize: '4rem',
         fontWeight: 150,
         fontStretch: "condensed",
-        fontFamily: "cursive",
+        // fontFamily: "cursive",
       },
     },
     
