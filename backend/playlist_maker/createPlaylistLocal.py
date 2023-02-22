@@ -26,9 +26,7 @@ def main():
     pm.populate_playlist(playlist, tracks)
     # get link to playlist
     link = pm.get_playlist_link()
+    # local test
     print(link)
-
-    return link
-
 if __name__ == "__main__":
     main()

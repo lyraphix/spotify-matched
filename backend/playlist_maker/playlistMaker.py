@@ -99,7 +99,6 @@ class playlistmaker:
             for track in response_json['tracks']['items']:
                 tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
 
-
         # remove duplicates
         tracks = set(tracks)
         return tracks
