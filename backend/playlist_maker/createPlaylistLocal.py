@@ -4,20 +4,19 @@ Note: Please don't delete or integrate this into Vercel!
 Author: Ellie Paek
 """
 
-import os
 
 from playlistMaker import playlistmaker
 
 def main():
     # replace auth with own authentication code (expires every hour)
-    auth = "BQAbx0boLpY8KnQTjr_n3Aa6F4hOSgqzBKwr08kvAo2Hp_zmxdi7DKhJbHn9FYKzfabs3oU5cJreL18k1B4GA-8QDTN5-RLgOoK385Q3SxAc0lMqvs6QYzgON8_i5pE7SpjY9T8VWj9rBH0_LWGA_Wo6G9LH9gSVVFQrEJ-1Iss8SY3E17dnHKIhN6KomkFDh2HJ6xel_CSkzAtikSpiKYTltXso8SLR2OnOSryRW7T0XWwAAnBnLh9ju4XCAjyy86p-jIcVsZNM1S90O_R7UTkTyz3kp-MmfWrf56iyaNVRjgoImVeu3txMB5DNaLfjJjjm6Op-j0PfQYtY1w"
+    auth = "BQAzVsa1eNm4hqhTablsVaiq7nO5sm1OSHd6g7DP-OAUbGlDMCmcjH2pD3xIE9HUaAfOrouNmZaY9KSjJzn3q2PJ1vfQtwSktIZOfRoj4q5rUwScRzQrM6jC4dBPSyB02spEmZUNBO22vfyvqap8t-RtxpYidhg6Z1DHteKWZ-P8V9xqVIbZl33qPLm3O4QGBPkw7n9r5mA7GwJ1hJPE2u4aaktIrWFXkqZooIMxNUinxhNouk0u-1tQf-zVXK6aXGNkJv8Mw5RezpCUbYTaZSnC8qpbG6tx6KZbyLei_9xXNtYUKdHNHhfMW1ypxgKZ7srvD2nifArY23Sf0Q"
     pm = playlistmaker(auth)
 
     # get genre types?
-    genres = ["rock", "pop"]
+    genres = ["r-n-b", "k-pop"]
 
     # get tracks
-    num_tracks = 50 # limit is 50 for recently played
+    num_tracks = 50 # limit is 50 for recently played and top
     tracks = pm.get_tracks_genre_filter(num_tracks, genres)
 
     # get playlist name from user and create playlist
