@@ -51,7 +51,7 @@ const makeToolBar = function (username, avatar) {
                         }}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box sx ={{width: 80, mt: 3}}>
+                        <Box sx ={{width: 180, mt: 3}}>
                             <List sx ={{ml: 1}}>
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
@@ -117,6 +117,7 @@ const makeToolBar = function (username, avatar) {
                         </Box>
                     </Drawer>
                     {/* </React.Fragment> */}
+                    {/* <Box sx ={{flexGrow: 1}}></Box> */}
                     <Box
                         direction="row"
                         sx={{ width: 1 / 4, flexDirection: "row", flexGrow: 3 }}>
