@@ -122,7 +122,7 @@ export default function Dashboard() {
 
             <Box sx={{ mb: 0.5, flexGrow: 0.5, flexGrow: 1 }}>
               <Button
-                style={{ minHeight: '150px', flexGrow: 1}}
+                style={{ minHeight: '150px', minWidth: '200px', flexGrow: 1}}
                 fullWidth
                 // fullHeight
                 variant="text"
@@ -149,7 +149,7 @@ export default function Dashboard() {
                 {/* </Grid>s */}
               </Button>
               <Button
-                style={{ minHeight: '205px', flexGrow: 3 }}
+                style={{ minHeight: '205px', minWidth: '200px', flexGrow: 3 }}
                 fullWidth
                 // fullHeight
                 // style={{ 
