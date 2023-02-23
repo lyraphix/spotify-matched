@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/posts/accountoverview": [
+    "/posts/privacySettings": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/posts/accountoverview.js"
-    ],
-    "/posts/generalSettings": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/posts/generalSettings.js"
+      "static/chunks/pages/posts/privacySettings.js"
     ],
     "/posts/reuseables": [
       "static/chunks/webpack.js",
