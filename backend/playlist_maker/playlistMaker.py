@@ -1,9 +1,9 @@
 """
-Playlist making class, for now helps create a playlist with top 20 tracks
+Playlist making class
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
 To do: separate by genre (with possibly more songs), if bitch lasagna is in the song list, remove it (easter egg)
-Updated: 2023/02/20 — divide by genre
+Updated: 2023/02/22 — HAHA COMBINING THINGS ACTUALLY WORKED
 """
 
 import json
