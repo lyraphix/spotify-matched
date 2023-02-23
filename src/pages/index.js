@@ -9,6 +9,8 @@ import { Card, Link, AppBar, Toolbar, Container, CssBaseline, Typography, Box, G
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import about from "./posts/about";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,6 +32,9 @@ export default function Home() {
   function open({link}) {
     return window.open("/posts/first-post")
   }
+  // function openAbout(){
+  //   return "/posts/about"
+  // }
   return (
     <Container >
       <CssBaseline />  
@@ -91,7 +96,7 @@ export default function Home() {
                <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
 
                 {/* <link sx={{flexGrow: 1, flexDirection: "row",}} href="/posts/about"> About us</link> */}
-                <Link href="/posts/about" >
+                <Link href = "/posts/about" >
                     {'About us'}
                   </Link>
                <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>

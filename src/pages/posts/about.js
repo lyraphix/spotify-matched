@@ -8,6 +8,7 @@ import makeToolBar from "./reuseables";
 
 const inter = Inter({ subsets: ['latin'] })
 const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
+const login = false;
 
 class BounceAbout extends Component {
   render() {
@@ -18,7 +19,7 @@ class BounceAbout extends Component {
   }
 }
 
-export default function about() {
+const about = function (login) {
 
 
 
@@ -31,10 +32,10 @@ export default function about() {
       <Box sx={{
         flexGrow: 1
       }}>
-        {makeToolBar()}
+        {makeToolBar(login)}
 
         <Box sx={{ // The Whole Page
-          mt: 15,
+          mt: 20,
           mb: 3
         }}>
           <Box // Big Letters
@@ -88,3 +89,4 @@ export default function about() {
     </Container>
   )
 }
+export default about;

@@ -12,7 +12,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
-const makeToolBar = function (username, avatar) {
+const makeToolBar = function (username, avatar, login) {
 
     const [anchorEl, setAnchorEl] = useState(null);
     const openMenu = (event) => {
@@ -36,10 +36,8 @@ const makeToolBar = function (username, avatar) {
         <Box >
             <AppBar position="fixed">
                 {/* <Toolbar sx={{height: 90, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}> */}
+                    {login?
                 <Toolbar sx={{height: 90, backgroundColor:"background.default"}}>
-
-
-                    {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
                     <Drawer
                         anchor='left'
@@ -178,8 +176,56 @@ const makeToolBar = function (username, avatar) {
                             <Link href="/" underline="none" color="white">Logout</Link>
                         </MenuItem>
                     </Menu>
-
                 </Toolbar>
+
+                    : 
+                    <Toolbar sx={{height: 110, backgroundColor:"background.default"}}>
+                      {/* <Box sx = {{flexGrow: 1}}></Box> */}
+                         {/* <Typography variant='h1' sx={{ ml: 2}}>
+                           Spotify
+                         </Typography> */}
+                         <Button
+                            href="/"
+                            >
+                            
+                        {/* <Image> */}
+                            <img
+                                sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                                component="img"
+                                height="80"
+                                src="/logo.jpg"
+                                // alt="Paella dish"
+                            />
+                        {/* </Image> */}
+                        </Button>
+                        <Box style={{
+                                // width: image.width,
+                                flex:18
+                            }}></Box>
+                   {/* </Box> */}
+                         
+                         <Button
+                               variant="text"
+                               size = "medium"
+                               href="/posts/newaccount"
+                           >
+                               Sign Up
+                         </Button>
+                         <Box style={{
+                                // width: image.width,
+                                flex:0.3
+                            }}></Box>
+                         <Button
+                               variant="contained"
+                               size = "medium"
+                               sx={{ color:"primary"}}
+                               href="/posts/first-post"
+                           >
+                               Login
+                         </Button>
+                  </Toolbar>}
+
+                    
             </AppBar>
         </Box>
 
@@ -188,6 +234,7 @@ const makeToolBar = function (username, avatar) {
 
 
 }
+
 export default makeToolBar;
 
 //<Box sx={{ ml: 1, flexGrow: 1, display: 'flex' }}></Box>

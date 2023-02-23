@@ -13,6 +13,10 @@ import { Stack, Divider, Link, Avatar, Container, CssBaseline, Typography, Box, 
 import SettingsIcon from '@mui/icons-material/Settings';
 
 import makeToolBar from "./reuseables";
+// import about from "./about";
+// import about from "./posts/about";
+
+
 
 const settingsSideBar = function (currentlocation) {
 
@@ -194,7 +198,8 @@ const settingsSideBar = function (currentlocation) {
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <InfoIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href='/posts/about' underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/about" underline="hover"  variant='iconFont' color='white'>
+                {/* <Button href='/posts/about' underline="hover"  variant='iconFont' color='white'> */}
                   About
                 </Link>
               </Box>
