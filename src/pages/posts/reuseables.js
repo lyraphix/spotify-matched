@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HomeIcon from '@mui/icons-material/Home';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PrivacyTipIcon from '@mui/icons-material/PrivacyTip';
 import SearchIcon from '@mui/icons-material/Search';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import { List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
@@ -150,10 +153,27 @@ const makeToolBar = function (username, avatar) {
                         keepMounted
                         onClose={closeMenu}
                     >
-                        <MenuItem ><Link href="/posts/profile" underline="none" color="white">{'Profile'}</Link></MenuItem>
-                        
-                        <MenuItem ><Link href="/posts/generalSettings" underline="none" color="white">{'Settings'}</Link></MenuItem>
-                        <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
+                        <MenuItem ><ManageAccountsIcon />
+                            <Box sx={{ ml: 2 }} />
+                            <Link href="/posts/profile" underline="none" color="white">Profile</Link>
+                        </MenuItem>
+                        <MenuItem ><DashboardIcon />
+                            <Box sx={{ ml: 2 }} />
+                            <Link href="/posts/dashboard" underline="none" color="white">Dashboard</Link>
+                        </MenuItem>
+                        <Divider />
+                        <MenuItem ><SettingsIcon/>
+                            <Box sx={{ ml: 2 }} />
+                            <Link href="/posts/generalSettings" underline="none" color="white">Settings</Link>
+                        </MenuItem>
+                        <MenuItem ><PrivacyTipIcon/>
+                            <Box sx={{ ml: 2 }} />
+                            <Link href="/" underline="none" color="white">Privacy Settings</Link>
+                        </MenuItem>
+                        <MenuItem ><LogoutIcon/>
+                            <Box sx={{ ml: 2 }} />
+                            <Link href="/" underline="none" color="white">Logout</Link>
+                        </MenuItem>
                     </Menu>
 
                 </Toolbar>
