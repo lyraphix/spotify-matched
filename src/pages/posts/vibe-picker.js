@@ -10,7 +10,8 @@ import { Autocomplete, Chip, Image, Paper, IconButton, List, ListItem, ListItemB
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
+const login = true;
 
 
 // import { Formik, field, form} from 'formik'
@@ -177,7 +178,7 @@ export default function Dashboard() {
     <Container >
       <CssBaseline />
       render() {//clean
-        makeToolBar(username, avatar)}
+        makeToolBar(username, avatar, login)}
 
       <Box sx={{
         mt: 15,

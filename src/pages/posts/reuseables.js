@@ -36,7 +36,7 @@ const makeToolBar = function (username, avatar, login) {
         <Box >
             <AppBar position="fixed">
                 {/* <Toolbar sx={{height: 90, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}> */}
-                    {login?
+                    {/* {login? */}
                 <Toolbar sx={{height: 90, backgroundColor:"background.default"}}>
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
                     <Drawer
@@ -178,32 +178,32 @@ const makeToolBar = function (username, avatar, login) {
                     </Menu>
                 </Toolbar>
 
-                    : 
+                    {/* : 
                     <Toolbar sx={{height: 110, backgroundColor:"background.default"}}>
                       {/* <Box sx = {{flexGrow: 1}}></Box> */}
                          {/* <Typography variant='h1' sx={{ ml: 2}}>
                            Spotify
                          </Typography> */}
-                         <Button
+                         {/* <Button
                             href="/"
                             >
                             
                         {/* <Image> */}
-                            <img
+                            {/* <img
                                 sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
                                 component="img"
                                 height="80"
                                 src="/logo.jpg"
-                                // alt="Paella dish"
-                            />
+                                // alt="Paella dish" */}
+                            {/* /> */}
                         {/* </Image> */}
-                        </Button>
+                        {/* </Button>
                         <Box style={{
                                 // width: image.width,
                                 flex:18
-                            }}></Box>
+                            }}></Box> */}
                    {/* </Box> */}
-                         
+{/*                          
                          <Button
                                variant="text"
                                size = "medium"
@@ -211,19 +211,19 @@ const makeToolBar = function (username, avatar, login) {
                            >
                                Sign Up
                          </Button>
-                         <Box style={{
-                                // width: image.width,
-                                flex:0.3
-                            }}></Box>
-                         <Button
-                               variant="contained"
-                               size = "medium"
-                               sx={{ color:"primary"}}
-                               href="/posts/first-post"
-                           >
-                               Login
-                         </Button>
-                  </Toolbar>}
+                         <Box style={{ */}
+                {/* //                 // width: image.width,
+                //                 flex:0.3
+                //             }}></Box>
+                //          <Button */}
+                {/* //                variant="contained"
+                //                size = "medium"
+                //                sx={{ color:"primary"}}
+                //                href="/posts/first-post"
+                //            >
+                //                Login */}
+                {/* //          </Button>
+                //   </Toolbar>  */}
 
                     
             </AppBar>

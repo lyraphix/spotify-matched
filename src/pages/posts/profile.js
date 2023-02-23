@@ -9,6 +9,8 @@ import makeToolBar from "./reuseables";
 
 
 const inter = Inter({ subsets: ['latin'] })
+const login = true;
+
 
 export default function profile() {
 
@@ -48,7 +50,7 @@ export default function profile() {
                 flexGrow: 1
             }}>
                 render() {
-                    makeToolBar()}
+                    makeToolBar(login)}
 
                 <Box
                     sx={{

@@ -11,6 +11,7 @@ import { bounce } from 'react-animations';
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
 
+const login = true;
 
 const inter = Inter({ subsets: ['latin'] })
 const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;

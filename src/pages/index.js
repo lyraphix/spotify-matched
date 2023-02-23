@@ -88,40 +88,41 @@ export default function Home() {
                   </Toolbar>
                </AppBar>
                <Box sx={{height: 1000, color: "background.lighter"}}></Box>
-
-               <Box sx={{height: 100, display: "flex", color: "background.lighter"}}>
-               <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
-               {/* <Box> */}
-               <Typography variant = "text" sx={{flexGrow: 1, flexDirection: "row",}}> @ 2023 8BITS</Typography>
-               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
-
-                {/* <link sx={{flexGrow: 1, flexDirection: "row",}} href="/posts/about"> About us</link> */}
-                <Link href = "/posts/about" >
-                    {'About us'}
-                  </Link>
-               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
-               <Link href="/" >
-                    {'People'}
-                  </Link>
-               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
-
-                  <Link href="/" >
-                    {'Contact'}
-                  </Link>
-               {/* <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
-               <Link href="/" >
-                    {'Support'}
-                  </Link> */}
-               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
-
-                  <Link href="/posts/tos" >
-                    {'Terms of Service'}
-                  </Link>
-               {/* </Box> */}
+              {/* <Box sx={{height: 100, display: "flex", color: "background.lighter"}}> */}
+               <Box sx={{height: 100, color: "background.lighter"}}>
+                  <Box sx = {{display: "flex"}}>
+                  <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
+                {/* <Box> */}
                 
-               <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
 
-               </Box>
+                  {/* <link sx={{flexGrow: 1, flexDirection: "row",}} href="/posts/about"> About us</link> */}
+                  <Link href = "/posts/aboutNonLogin" >
+                      {'About us'}
+                    </Link>
+                  <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+                  <Link href="/" >
+                        {'People'}
+                    </Link>
+                  <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+                  <Link href="/" >
+                      {'Contact'}
+                  </Link>
+                  <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+                  <Link href="/posts/tos" >
+                      {'Terms of Service'}
+                  </Link>
+                {/* </Box> */}
+                  
+                  <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
+                  </Box>
+                  <Box sx = {{mt: 2, display: "flex"}}>
+                    <Box sx={{flexGrow: 6, flexDirection: "row"}}></Box>
+                    <Typography variant = "text" sx={{flexGrow: 3, flexDirection: "row",}}> @ 2023 8BITS</Typography>
+                    <Box sx={{flexGrow: 3, flexDirection: "row"}}></Box>
+                  </Box>
+                </Box>
+                
+               {/* </Box> */}
          </Box>
     </Container>
   )

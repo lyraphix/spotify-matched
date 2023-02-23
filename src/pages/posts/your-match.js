@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 export default function YourMatch() {
-
+  const login = true;
   const avatar = ""
   const username = ""
   const clicked = ""
@@ -49,7 +49,7 @@ export default function YourMatch() {
     <Container >
       <CssBaseline />
       render() {//clean
-        makeToolBar(username, avatar)}
+        makeToolBar(username, avatar, login)}
 
       <Box sx={{
         mt: 15,
