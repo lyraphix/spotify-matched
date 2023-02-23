@@ -15,6 +15,11 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/404": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/404.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,15 +35,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/posts/accountoverview.js"
     ],
-    "/posts/dashboard": [
+    "/posts/generalSettings": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/posts/dashboard.js"
+      "static/chunks/pages/posts/generalSettings.js"
     ],
-    "/posts/editprofile": [
+    "/posts/reuseables": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/posts/editprofile.js"
+      "static/chunks/pages/posts/reuseables.js"
     ]
   },
   "ampFirstPages": []

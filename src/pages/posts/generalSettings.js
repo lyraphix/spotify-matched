@@ -14,18 +14,23 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 import makeToolBar from "./reuseables";
 
+
 const settingsSideBar = function (currentlocation) {
 
   const avatar = "/hollow.jpeg"
   const username = "aHollowTest"
+  currentlocation = currentlocation.toString()
+
+  
+    
+  
 
   return (
 
     <Box sx={{
       flexGrow: 1
     }}>
-      render() {
-        makeToolBar()}
+      {makeToolBar()}
       <Box sx={{ // The Whole Page
         mt: 15,
         mb: 3
@@ -68,7 +73,7 @@ const settingsSideBar = function (currentlocation) {
                 <Grid
                   sx={{ mt: 5, flexGrow: 1 }}>
                   <Typography variant="h2Large" color="pink">
-                    {currentlocation}
+                  {currentlocation}
                   </Typography>
                 </Grid>
               </Grid>
@@ -78,36 +83,35 @@ const settingsSideBar = function (currentlocation) {
 
           </Box>
         </Box>
-      </Box>
 
-      <Box
-        fullHeight
-        sx={{
-          flexGrow: 1, mt: 10, display: 'flex',
-          flexGrow: 1,
-          flexDirection: "column"
-        }}
 
-      >
-        <Box sx={{ mt: 1, flexGrow: 1 / 2, display: 'flex', direction: 'row' }}>
-          <SettingsIcon />
-          <Box sx={{ ml: 1 }}></Box>
-          <Typography
-            variant='h1'
-          >
+        <Box
+          fullHeight
+          sx={{
+            flexGrow: 1, mt: 10, display: 'flex',
+            flexGrow: 1,
+            flexDirection: "column"
+          }}
 
-            Settings
-
-          </Typography>
-        </Box>
-
-        <Box sx={{ mt: 3, flexGrow: 1, display: 'flex' }}></Box>
-        <Stack
-          direction="column"
-          //divider={<Divider orientation="horizontal" flexItem />}
-          spacing={2}
         >
-          <Grid>
+          <Box sx={{ mt: 1, flexGrow: 1 / 2, display: 'flex', direction: 'row' }}>
+            <SettingsIcon />
+            <Box sx={{ ml: 1 }}></Box>
+            <Typography
+              variant='h1'
+            >
+
+              Settings
+
+            </Typography>
+          </Box>
+
+          <Box sx={{ mt: 3, flexGrow: 1, display: 'flex' }}></Box>
+          <Stack
+            direction="column"
+            //divider={<Divider orientation="horizontal" flexItem />}
+            spacing={2}
+          >
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <HomeIcon />
@@ -118,9 +122,7 @@ const settingsSideBar = function (currentlocation) {
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <EditIcon />
@@ -131,120 +133,101 @@ const settingsSideBar = function (currentlocation) {
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <LanguageIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="/posts/language" underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/language" underline="hover" variant='iconFont' color='white'>
                   Language
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <ColorLensIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="/posts/themeSettings" underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/themeSettings" underline="hover" variant='iconFont' color='white'>
                   Theme
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <NotificationsActiveIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="/posts/notifications" underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/notifications" underline="hover" variant='iconFont' color='white'>
                   Notifications
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <PrivacyTipIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="/posts/privacySettings" underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/privacySettings" underline="hover" variant='iconFont' color='white'>
                   Privacy Settings
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <DeleteIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href='/posts/about' underline="hover"  variant='iconFont' color='white'>
+                <Link href='/posts/about' underline="hover" variant='iconFont' color='white'>
                   About
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <CallMadeIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="/posts/support" underline="hover"  variant='iconFont' color='white'>
+                <Link href="/posts/support" underline="hover" variant='iconFont' color='white'>
                   Support Us
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <PostAddIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="https://www.gdprprivacypolicy.net/live.php?token=RYjiEytOOHcu0QGU3fMFSlUObDcusrYS" underline="hover"  variant='iconFont' color='white'>
+                <Link href="https://www.gdprprivacypolicy.net/live.php?token=RYjiEytOOHcu0QGU3fMFSlUObDcusrYS" underline="hover" variant='iconFont' color='white'>
                   Terms of Service
                 </Link>
               </Box>
 
             </Grid>
-          </Grid>
 
-          <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
                 <DeleteIcon />
                 <Box sx={{ ml: 2 }} />
-                <Link href="#" underline="hover"  variant='iconFont' color='white'>
+                <Link href="#" underline="hover" variant='iconFont' color='white'>
                   Delete Account
                 </Link>
               </Box>
-
             </Grid>
-          </Grid>
 
 
 
-        </Stack>
+
+          </Stack>
+        </Box>
+
       </Box>
-
     </Box>
 
   )
