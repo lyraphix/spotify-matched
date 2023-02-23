@@ -77,6 +77,7 @@ export default function FriendMatch() {
             alignItems: "center",
           }}>
           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          <Typography variant="text" >Your Link</Typography>
           <TextField
                     required
                     // fullWidth
@@ -89,7 +90,7 @@ export default function FriendMatch() {
            <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
           
         </Box>
-        <Box
+        {/* <Box
           // fullHeights
           sx={{
             mt: 5,
@@ -113,7 +114,7 @@ export default function FriendMatch() {
                   />
            <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
           
-        </Box>
+        </Box> */}
         <Box
           // fullHeights
           sx={{
