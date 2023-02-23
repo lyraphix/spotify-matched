@@ -144,7 +144,7 @@ const makeToolBar = function (username, avatar) {
                         </Button>
                     </Box>
                     <Box sx ={{flexGrow: 3}}></Box>
-                              
+
                     <Button onClick={openMenu} sx = {{flexGrow: 1}}>
                         <Avatar alt={username} src={avatar} />
                     </Button>
@@ -167,7 +167,7 @@ const makeToolBar = function (username, avatar) {
                         <Divider />
                         <MenuItem ><SettingsIcon/>
                             <Box sx={{ ml: 2 }} />
-                            <Link href="/posts/generalSettings" underline="none" color="white">Settings</Link>
+                            <Link href="/posts/accountoverview" underline="none" color="white">Settings</Link>
                         </MenuItem>
                         <MenuItem ><PrivacyTipIcon/>
                             <Box sx={{ ml: 2 }} />

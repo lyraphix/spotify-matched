@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/posts/dashboard": "pages/posts/dashboard.js",
-  "/posts/vibe-picker": "pages/posts/vibe-picker.js",
-  "/": "pages/index.js"
+  "/posts/accountoverview": "pages/posts/accountoverview.js",
+  "/posts/editprofile": "pages/posts/editprofile.js"
 }
