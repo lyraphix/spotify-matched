@@ -3,8 +3,6 @@ A testing function for creating a basic playlist
 Author: Ellie Paek
 """
 
-import os
-
 from playlistMaker import playlistmaker
 
 # pretend account for vercel: qwertyay@gmail.com
@@ -13,7 +11,6 @@ from playlistMaker import playlistmaker
 def main(oauth):
     auth = oauth
     pm = playlistmaker(auth)
-    # os.getenv("SPOTIFY_AUTHORIZATION_TOKEN"),
 
     # get tracks
     num_tracks = 20
