@@ -32,7 +32,9 @@ const makeToolBar = function (username, avatar) {
 
         <Box >
             <AppBar position="fixed">
-                <Toolbar sx={{height: 75, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}>
+                {/* <Toolbar sx={{height: 90, backgroundColor:"background.default", borderBottom: 0.1, borderColor: "divider"}}> */}
+                <Toolbar sx={{height: 90, backgroundColor:"background.default"}}>
+
 
                     {/* <React.Fragment key={anchorDrawer}> */}
                     <Button onClick={openDrawer}><MenuIcon></MenuIcon></Button>
@@ -40,11 +42,17 @@ const makeToolBar = function (username, avatar) {
                         anchor='left'
                         open={Boolean(anchorDrawer)}
                         onClose={closeDrawer}
-                        
+                        sx ={{color: "black"}}
+                        PaperProps={{
+                            sx: {
+                              backgroundColor: "black",
+                              color: "divider",
+                            }
+                        }}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
                     >
-                        <Box >
-                            <List >
+                        <Box sx ={{width: 180, mt: 3}}>
+                            <List sx ={{ml: 1}}>
                                 <ListItem key={"Home"} disablePadding >
                                     <ListItemButton href="/posts/dashboard">
                                         <ListItemIcon>
@@ -79,29 +87,29 @@ const makeToolBar = function (username, avatar) {
                                 </ListItem>
                             </List>
                             <Divider sx={{height:0.1, width: 1}}/>
-                            <List>
-                                <ListItem key={"Create Playlist"}>
+                            <List sx ={{ml: 1}}>
+                                <ListItem key={"Create Playlist"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Your Playlists"} disablePadding />
+                                        <ListItemText primary={"Your Playlists"}  />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Matched Playlist"} >
+                                <ListItem key={"Matched Playlist"} disablePadding>
                                     <ListItemButton >
                                         {/* <ListItemIcon>
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */} 
-                                        <ListItemText primary={"Matched Playlist"} disablePadding />
+                                        <ListItemText primary={"Matched Playlist"}  />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Episodes"} >
+                                <ListItem key={"Episodes"} disablePadding>
                                     <ListItemButton>
                                         {/* <ListItemIcon> */}
                                             {/* <InboxIcon /> */}
                                         {/* </ListItemIcon> */}
-                                        <ListItemText primary={"Episodes"} disablePadding/>
+                                        <ListItemText primary={"Episodes"} />
                                     </ListItemButton>
                                 </ListItem>
 
@@ -109,15 +117,27 @@ const makeToolBar = function (username, avatar) {
                         </Box>
                     </Drawer>
                     {/* </React.Fragment> */}
+                    {/* <Box sx ={{flexGrow: 1}}></Box> */}
                     <Box
                         direction="row"
                         sx={{ width: 1 / 4, flexDirection: "row", flexGrow: 3 }}>
                         {/* <Typography variant='h1' sx={{ ml: 2}}>
               Spotify
             </Typography> */}
-                        <Typography variant='h2' sx={{ flexGrow: 3 }}>
+                        {/* <Typography variant='h2' sx={{ flexGrow: 3 }}>
                             MATCHED
-                        </Typography>
+                        </Typography> */}
+                         <Button
+                            href="/"
+                            >
+                            <img
+                                sx={{mt: 10, flexGrow: 1, objectFit: "contain", alignItems: "end" }}
+                                component="img"
+                                height="60"
+                                src="/icon.png"
+                                // alt="Paella dish"
+                            />
+                        </Button>
                     </Box>
                     <Button onClick={openMenu}>
                         <Avatar alt={username} src={avatar} />
@@ -131,8 +151,9 @@ const makeToolBar = function (username, avatar) {
                         onClose={closeMenu}
                     >
                         <MenuItem ><Link href="/posts/profile" underline="none" color="white">{'Profile'}</Link></MenuItem>
-                        <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
+                        
                         <MenuItem ><Link href="/posts/generalSettings" underline="none" color="white">{'Settings'}</Link></MenuItem>
+                        <MenuItem ><Link href="/" underline="none" color="white">{'Logout'}</Link></MenuItem>
                     </Menu>
 
                 </Toolbar>
@@ -148,3 +169,4 @@ export default makeToolBar;
 
 //<Box sx={{ ml: 1, flexGrow: 1, display: 'flex' }}></Box>
 //<Box sx={{ mt: 3, flexGrow: 1, display: 'flex' }}></Box>
+

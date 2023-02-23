@@ -10,13 +10,14 @@ export default function App({ Component, pageProps }) {
     palette: {
       mode: 'dark',
       primary: {
-        main: '#608108',
+        main: '#3eb575',
+        mainPage: '#47A85A',
         light: '#B5C68C',
         dark: '#394221',
         text: "white"
       },
       secondary: {
-        main: '#043D7A',
+        main: '#9BB9D8',
         light: '#92AFCE',
         dark: '#0C233B',
         text: "white"
@@ -66,7 +67,7 @@ export default function App({ Component, pageProps }) {
         fontSize: '2rem',
         fontWeight: 150,
         fontStretch: "condensed",
-        fontFamily: "cursive",
+        // fontFamily: "cursive",
       },
       iconFont: {
         // fontFamily: `"Gill Sans", sans-serif`,
@@ -81,7 +82,7 @@ export default function App({ Component, pageProps }) {
         fontSize: '4rem',
         fontWeight: 150,
         fontStretch: "condensed",
-        fontFamily: "cursive",
+        // fontFamily: "cursive",
       },
     },
     

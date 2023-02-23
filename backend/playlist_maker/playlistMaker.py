@@ -90,6 +90,15 @@ class playlistmaker:
             artist_id = track["track"]["artists"][0]["id"]
             if self.match_artist_genre(artist_id, requested_genres):
                 tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
+
+        # reset url again to get specific genre tracks of 2022 (Carrie's design)
+        for genre in requested_genres:
+            url = f"https://api.spotify.com/v1/search?type=track&q=year:2022%20genre:{genre}&limit=5"
+            response = self._place_get_api_request(url)
+            response_json = response.json()
+            for track in response_json['tracks']['items']:
+                tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
+
         # remove duplicates
         tracks = set(tracks)
         return tracks
