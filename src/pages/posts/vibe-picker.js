@@ -190,7 +190,7 @@ export default function Dashboard() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Typography variant="h2Large" fontSize={'3.5rem'}>Select your vibe</Typography>
+          <Typography variant="h2Large" fontSize={'3.5rem'}>Your Vibes</Typography>
         </Box>
         <Box
           fullHeight

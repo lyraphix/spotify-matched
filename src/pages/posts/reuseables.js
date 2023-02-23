@@ -120,7 +120,7 @@ const makeToolBar = function (username, avatar) {
                         </Box>
                     </Drawer>
                     {/* </React.Fragment> */}
-                    {/* <Box sx ={{flexGrow: 1}}></Box> */}
+                    <Box sx ={{flexGrow: 5}}></Box>
                     <Box
                         direction="row"
                         sx={{ width: 1 / 4, flexDirection: "row", flexGrow: 3 }}>

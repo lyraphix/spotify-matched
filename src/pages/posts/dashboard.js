@@ -175,17 +175,17 @@ export default function Dashboard() {
               </Button>
               
             </Box>
-            <Box sx={{flexGrow:1}}></Box>
+            <Box sx={{flexGrow:0.5}}></Box>
             <Box sx={{ mb: 0.5, flexGrow: 8, flexDirection:"row" }}>
               <Button
                 fullWidth
                 // fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '358px', flexGrow: 1 }}
+                style={{ minHeight: '358px', minWidth: '200px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
-                sx={{ mt: 0, color: 'forth.text', backgroundColor:"forth.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down" }}
+                sx={{ mt: 0, color: 'forth.text', backgroundColor:"forth.main", alignItems: "stretch", display: "flex", flexDirection: "row", objectFit: "scale-down", justifyContent: "left" }}
                 href="/posts/your-match"
                 >
                   {/* <Grid direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "end", direction: "column", justifyContent: "center", objectFit: "cover"}}>
@@ -200,14 +200,14 @@ export default function Dashboard() {
 
 
             </Box>
-            <Box sx={{ flexGrow: 1, flexDirection:"row" }}></Box>
+            <Box sx={{ flexGrow: 0.5, flexDirection:"row" }}></Box>
             <Box sx={{ mb: 0.5, flexGrow: 8 }}>
               <Button
                 fullWidth
                 // fullHeight
                 // style={{ 
                 //   flexGrow:1}}
-                style={{ minHeight: '358px', flexGrow: 1 }}
+                style={{ minHeight: '358px', minWidth: '200px', flexGrow: 1 }}
                 variant="text"
                 size="medium"
                 sx={{ mt: 0, color: 'primary.text', backgroundColor:"primary.mainPage", alignItems: "stretch"}}

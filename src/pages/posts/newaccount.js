@@ -56,7 +56,7 @@ export default function Newaccount() {
       fontSize: '2rem',
       fontWeight: 150,
       fontStretch: "condensed",
-      fontFamily: "cursive",
+      // fontFamily: "cursive",
     },
     iconFont: {
       fontFamily: `"Gill Sans", sans-serif`,
