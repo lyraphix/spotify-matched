@@ -192,7 +192,7 @@ const settingsSideBar = function (currentlocation) {
           <Grid>
             <Grid item xs={2} sx={{ flexGrow: 1 }}>
               <Box sx={{ mt: 1, flexGrow: 1, display: 'flex', direction: 'row', justifyContent: "left" }}>
-                <DeleteIcon />
+                <InfoIcon />
                 <Box sx={{ ml: 2 }} />
                 <Link href='/posts/about' underline="hover"  variant='iconFont' color='white'>
                   About
