@@ -127,7 +127,7 @@ export default function Dashboard() {
                 // fullHeight
                 variant="text"
                 size="medium"
-            sx={{ direction: 'column',   justifyContent: "center",  mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "end", display: "flex", flexDirection: "row", objectFit: "scale-down"}}
+            sx={{ direction: 'column',   justifyContent: "center",  mt: 0, color: 'secondary.text', backgroundColor:"secondary.main", alignItems: "stretch", display: "flex", flexDirection: "row", objectFit: "scale-down", justifyContent: "left"}}
                 href="/posts/first-post"
               >
                 {/* <Grid direction= "column" sx={{flexGrow:1, display: 'flex', alignItems: "end", direction: "column", justifyContent: "center", objectFit: "cover"}}> */}
@@ -149,7 +149,7 @@ export default function Dashboard() {
                 {/* </Grid>s */}
               </Button>
               <Button
-                style={{ minHeight: '205px', minWidth: '200px', flexGrow: 3 }}
+                style={{ minHeight: '205px', minWidth: '200px', flexGrow: 3, alignItems: "stretch", display: "flex", flexDirection: "row", objectFit: "scale-down", justifyContent: "left"}}
                 fullWidth
                 // fullHeight
                 // style={{ 
@@ -159,7 +159,7 @@ export default function Dashboard() {
                 sx={{ mt: 0.5, color: 'third.text', backgroundColor:"third.main", alignItems: "stretch"}}
                 href="/posts/vibe-picker"
               >
-                <Grid container direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
+                {/* <Grid container direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}> */}
                 {/* <Paper > */}
                 <Typography variant='iconFont'>Vibe</Typography>
                 <Typography variant='iconFont'>Picker</Typography>
@@ -171,7 +171,7 @@ export default function Dashboard() {
                     image="/static/src/img/friends.png"
                     alt="Paella dish"
                 /> */}
-                </Grid>
+                {/* </Grid> */}
               </Button>
               
             </Box>

@@ -50,6 +50,7 @@ const makeToolBar = function (username, avatar) {
                             sx: {
                               backgroundColor: "black",
                               color: "divider",
+                              flexGrow: 1
                             }
                         }}
                     // onOpen={toggleDrawer(anchorDrawer, true)}
@@ -120,7 +121,7 @@ const makeToolBar = function (username, avatar) {
                         </Box>
                     </Drawer>
                     {/* </React.Fragment> */}
-                    <Box sx ={{flexGrow: 4}}></Box>
+                    <Box sx ={{flexGrow: 10}}></Box>
                     <Box
                         direction="row"
                         sx={{ width: 1 / 4, flexDirection: "row", flexGrow: 3 }}>
@@ -142,7 +143,9 @@ const makeToolBar = function (username, avatar) {
                             />
                         </Button>
                     </Box>
-                    <Button onClick={openMenu}>
+                    <Box sx ={{flexGrow: 3}}></Box>
+                              
+                    <Button onClick={openMenu} sx = {{flexGrow: 1}}>
                         <Avatar alt={username} src={avatar} />
                     </Button>
                     <Menu
