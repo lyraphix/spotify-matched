@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import { useState } from 'react';
 import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -6,11 +6,22 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { CardMedia, Card, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
+import styled, { keyframes } from 'styled-components';
+import { bounce } from 'react-animations';
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
+const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
 
+class BounceGreeting extends Component {
+    render() {
+      const key = Math.random(); // generate a random key
+      return (
+        <Bounce key={key}><Typography variant="h2Large">Hi, Y/N</Typography></Bounce>
+      );
+    }
+  }
 
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
@@ -85,7 +96,7 @@ export default function Dashboard() {
             direction: "row"
           }}>
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
-          <Typography variant="h2Large">Hi, Y/N</Typography>
+          <BounceGreeting />
         </Box>
         
         <Box // Buttons
