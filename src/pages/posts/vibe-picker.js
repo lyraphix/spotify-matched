@@ -193,7 +193,7 @@ export default function Dashboard() {
           <Typography variant="h2Large" fontSize={'3.5rem'}>Your Vibes</Typography>
         </Box>
         <Box
-          fullHeight
+          // fullHeights
           sx={{
             mt: 5,
             ml: 5,
@@ -230,7 +230,7 @@ export default function Dashboard() {
 
         </Box>
         <Box
-          fullHeight
+          // fullHeight
           sx={{
             mt:5,
             display: "flex",

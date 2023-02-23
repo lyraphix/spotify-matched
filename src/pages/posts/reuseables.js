@@ -73,14 +73,14 @@ const makeToolBar = function (username, avatar) {
                                         <ListItemText primary={"Search"} />
                                     </ListItemButton>
                                 </ListItem>
-                                <ListItem key={"Settings"} disablePadding>
+                                {/* <ListItem key={"Settings"} disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
                                             <SettingsIcon />
                                         </ListItemIcon>
                                         <ListItemText primary={"Settings"} />
                                     </ListItemButton>
-                                </ListItem>
+                                </ListItem> */}
                                 <ListItem key={"Friends"} disablePadding>
                                     <ListItemButton>
                                         <ListItemIcon>
@@ -160,10 +160,10 @@ const makeToolBar = function (username, avatar) {
                             <Box sx={{ ml: 2 }} />
                             <Link href="/posts/profile" underline="none" color="white">Profile</Link>
                         </MenuItem>
-                        <MenuItem ><DashboardIcon />
+                        {/* <MenuItem ><DashboardIcon />
                             <Box sx={{ ml: 2 }} />
                             <Link href="/posts/dashboard" underline="none" color="white">Dashboard</Link>
-                        </MenuItem>
+                        </MenuItem> */}
                         <Divider />
                         <MenuItem ><SettingsIcon/>
                             <Box sx={{ ml: 2 }} />

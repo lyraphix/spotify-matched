@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import { ImageButton, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+import { Card, Link, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 
 // import { Formik, field, form} from 'formik'
@@ -57,26 +57,66 @@ export default function Home() {
                         </Button>
                         <Box style={{
                                 // width: image.width,
-                                flex:13
+                                flex:18
                             }}></Box>
                    {/* </Box> */}
+                         
                          <Button
                                variant="text"
-                               size = "medium"
-                               sx={{ flexGrow: 1, color:"primary"}}
-                               href="/posts/first-post"
-                           >
-                               Login
-                         </Button>
-                         <Button
-                               variant="contained"
                                size = "medium"
                                href="/posts/newaccount"
                            >
                                Sign Up
                          </Button>
+                         <Box style={{
+                                // width: image.width,
+                                flex:0.3
+                            }}></Box>
+                         <Button
+                               variant="contained"
+                               size = "medium"
+                               sx={{ color:"primary"}}
+                               href="/posts/first-post"
+                           >
+                               Login
+                         </Button>
                   </Toolbar>
                </AppBar>
+               <Box sx={{height: 1000, color: "background.lighter"}}></Box>
+
+               <Box sx={{height: 100, display: "flex", color: "background.lighter"}}>
+               <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
+               {/* <Box> */}
+               <Typography variant = "text" sx={{flexGrow: 1, flexDirection: "row",}}> @ 2023 8BITS</Typography>
+               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+
+                {/* <link sx={{flexGrow: 1, flexDirection: "row",}} href="/posts/about"> About us</link> */}
+                <Link href="/posts/about" >
+                    {'About us'}
+                  </Link>
+               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+               <Link href="/" >
+                    {'People'}
+                  </Link>
+               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+
+                  <Link href="/" >
+                    {'Contact'}
+                  </Link>
+               {/* <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+               <Link href="/" >
+                    {'Support'}
+                  </Link> */}
+               <Box sx={{flexGrow: 1, flexDirection: "row"}}></Box>
+
+                  <Link href="/posts/tos" >
+                    {'Terms of Service'}
+                  </Link>
+               {/* </Box> */}
+                
+               <Box sx={{flexGrow: 3, flexDirection: "row", color: "background.lighter"}}></Box>
+
+               </Box>
          </Box>
     </Container>
   )

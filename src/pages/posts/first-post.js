@@ -38,6 +38,7 @@ export default function FirstPost() {
       // },
       background: {
         default: '#19191B',
+        lighter: '#2A2E2C'
       },
       
     },

@@ -74,9 +74,13 @@ export default function App({ Component, pageProps }) {
         fontWeight: 700,
         fontSize: '1.3rem',
       },
-      h3: {
-        fontWeight: 5,
+      text: {
+        fontWeight: 20,
         fontSize: '1rem',
+      },
+      bottom: {
+        fontWeight: 20,
+        fontSize: '1.5rem',
       },
       h2Large: {
         fontSize: '4rem',

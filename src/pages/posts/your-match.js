@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
-export default function Dashboard() {
+export default function YourMatch() {
 
   const avatar = ""
   const username = ""
@@ -73,7 +73,22 @@ export default function Dashboard() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Link >link</Link>
+            <TextField
+                    required
+                    // fullWidth
+                    name="token"
+                    label="Playlist Token"
+                    type="token"
+                    id="token"
+                  />
+            <Button
+                               variant="contained"
+                               size = "medium"
+                              //  href=""
+                           >
+                               Generate Playlist 
+                         </Button>
+          {/* <Link >link</Link> */}
         </Box>
         
         </Box>
