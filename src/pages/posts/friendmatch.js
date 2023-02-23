@@ -127,7 +127,7 @@ export default function FriendMatch() {
             alignItems: "center",
           }}>
           <Box sx={{ flexGrow:2, flexDirection:"row" }}></Box>
-          <IconButton sx={{ flexGrow:1, flexDirection:"row" }}>
+          <IconButton sx={{ flexDirection:"row" }}>
             <GroupAdd/>
           </IconButton>
            <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
