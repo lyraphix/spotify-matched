@@ -5,11 +5,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import { Autocomplete, Chip, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
-import { QuestionAnswer } from '@mui/icons-material';
+import { GroupAdd, QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 // import { Formik, field, form} from 'formik'
 // import Link from 'next/link';
 export default function FriendMatch() {
-
+  const login = true;
   const avatar = ""
   const username = ""
   const clicked = ""
@@ -50,13 +49,11 @@ export default function FriendMatch() {
     <Container >
       <CssBaseline />
       render() {//clean
-        makeToolBar(username, avatar)}
+        makeToolBar(username, avatar, login)}
 
-      <Box sx={{
+<Box sx={{
         mt: 15,
-        mb: 3,
-        alignItems: "center",
-        justifyContent: "center",
+        mb: 3
       }}>
         <Box
           sx={{
@@ -65,32 +62,86 @@ export default function FriendMatch() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Typography variant="h2Large" fontSize={'3.5rem'}>Your matched playlist</Typography>
+          <Typography variant="h2Large" fontSize={'3.5rem'}>Friends Match</Typography>
         </Box>
         <Box
+          // fullHeights
           sx={{
-            display: "flex",
+            mt: 5,
+            ml: 5,
+            mr: 2,
+
+            display: 'flex',
+            flexGrow: 1,
+            flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
-            direction: "row"
           }}>
-            <TextField
+          <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          <TextField
                     required
                     // fullWidth
-                    name="token"
+                    name="token1"
                     label="User 1 Playlist Token"
-                    type="token"
-                    id="token"
+                    type="token1"
+                    id="token1"
+                    sx = {{flexGrow: 1,alignSelf: "center"}}
                   />
-                  <TextField
+           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          
+        </Box>
+        <Box
+          // fullHeights
+          sx={{
+            mt: 5,
+            ml: 5,
+            mr: 2,
+
+            display: 'flex',
+            flexGrow: 1,
+            flexDirection: "row",
+            alignItems: "center",
+          }}>
+          <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          <TextField
                     required
                     // fullWidth
                     name="token2"
                     label="User 2 Playlist Token"
                     type="token2"
                     id="token2"
+                    sx = {{flexGrow: 1,alignSelf: "center"}}
                   />
-                  <IconButton><GroupAddIcon/></IconButton>
+           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          
+        </Box>
+        <Box
+          // fullHeights
+          sx={{
+            mt: 5,
+            ml: 5,
+            mr: 2,
+
+            display: 'flex',
+            flexGrow: 1,
+            flexDirection: "row",
+            alignItems: "center",
+          }}>
+          <Box sx={{ flexGrow:2, flexDirection:"row" }}></Box>
+          <IconButton sx={{ flexGrow:1, flexDirection:"row" }}>
+            <GroupAdd/>
+          </IconButton>
+           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          
+        </Box>
+        <Box
+          // fullHeight
+          sx={{
+            mt:5,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            direction: "row"
+          }}>
             <Button
                                variant="contained"
                                size = "medium"
@@ -98,12 +149,11 @@ export default function FriendMatch() {
                            >
                                Generate Playlist 
                          </Button>
-          {/* <Link >link</Link> */}
         </Box>
-        
-        </Box>
+      </Box>
        
       
     </Container>
   )
 }
+

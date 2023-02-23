@@ -215,7 +215,7 @@ export default function Dashboard() {
             variant="text"
             size="medium"
             sx={{ mt: 0, color: 'primary.text', backgroundColor: "primary.mainPage", alignItems: "stretch" }}
-            href="/posts/first-post"
+            href="/posts/friendmatch"
           >
             <Grid container direction="column" sx={{ mt: 2, flexGrow: 1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
               {/* <Paper > */}

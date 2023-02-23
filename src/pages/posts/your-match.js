@@ -8,7 +8,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { Autocomplete, Chip, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
-import { QuestionAnswer } from '@mui/icons-material';
+import { GroupAdd, QuestionAnswer } from '@mui/icons-material';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,11 +51,9 @@ export default function YourMatch() {
       render() {//clean
         makeToolBar(username, avatar, login)}
 
-      <Box sx={{
+<Box sx={{
         mt: 15,
-        mb: 3,
-        alignItems: "center",
-        justifyContent: "center",
+        mb: 3
       }}>
         <Box
           sx={{
@@ -64,23 +62,43 @@ export default function YourMatch() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Typography variant="h2Large" fontSize={'3.5rem'}>Your matched playlist</Typography>
+          <Typography variant="h2Large" fontSize={'3.5rem'}>Your Match</Typography>
         </Box>
         <Box
+          // fullHeights
           sx={{
-            display: "flex",
+            mt: 5,
+            ml: 5,
+            mr: 2,
+
+            display: 'flex',
+            flexGrow: 1,
+            flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
-            direction: "row"
           }}>
-            <TextField
+          <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          <TextField
                     required
                     // fullWidth
                     name="token"
                     label="Playlist Token"
                     type="token"
                     id="token"
+                    sx = {{flexGrow: 1,alignSelf: "center"}}
                   />
+           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
+          
+        </Box>
+        
+        <Box
+          // fullHeight
+          sx={{
+            mt:5,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            direction: "row"
+          }}>
             <Button
                                variant="contained"
                                size = "medium"
@@ -88,12 +106,11 @@ export default function YourMatch() {
                            >
                                Generate Playlist 
                          </Button>
-          {/* <Link >link</Link> */}
         </Box>
-        
-        </Box>
+      </Box>
        
       
     </Container>
   )
 }
+
