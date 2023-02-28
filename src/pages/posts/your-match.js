@@ -62,7 +62,7 @@ export default function YourMatch() {
             justifyContent: "center",
             direction: "row"
           }}>
-          <Typography variant="h2Large" fontSize={'3.5rem'}>Your Match</Typography>
+          <Typography variant="h2Large" fontSize={'3.5rem'}>Create Your Vibe</Typography>
         </Box>
         <Box
           // fullHeights
@@ -76,17 +76,6 @@ export default function YourMatch() {
             flexDirection: "row",
             alignItems: "center",
           }}>
-          <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
-          <TextField
-                    required
-                    // fullWidth
-                    name="token"
-                    label="Playlist Token"
-                    type="token"
-                    id="token"
-                    sx = {{flexGrow: 1,alignSelf: "center"}}
-                  />
-           <Box sx={{ flexGrow:1, flexDirection:"row" }}></Box>
           
         </Box>
         
@@ -100,12 +89,12 @@ export default function YourMatch() {
             direction: "row"
           }}>
             <Button
-                               variant="contained"
-                               size = "medium"
-                              //  href=""
-                           >
-                               Generate Playlist 
-                         </Button>
+            variant="contained"
+            size="medium"
+            onClick={() => { window.location.href = "https://musiac-backend.vercel.app/"; }}
+          >
+            Generate Playlist
+          </Button>
         </Box>
       </Box>
        
