@@ -113,7 +113,7 @@ class playlistmaker:
         return userid
 
 
-# genre filter function
+    # genre filter function
     # since apparently getting the track genre is broken
     def match_artist_genre(self, artist, requested_genres):
         """Gets artists' genres and sees if it matches with the requested genres

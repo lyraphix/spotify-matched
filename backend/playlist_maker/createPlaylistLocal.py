@@ -5,30 +5,32 @@ Author: Ellie Paek
 """
 
 
-from playlistMaker import playlistmaker
+from multiplePlaylistMaker import playlistmaker
 
 def main():
 
     # replace auth with own authentication code (expires every hour)
-    auth = "BQBaCrXh1O5lIteXlxxccAthIDC1-nNEwuKYLqEuHA0eXDmg7x3hbxTUa--G4NhPDSQpwAu8FFlCJd3s6mvRdj7cwHEODZpf_5BKKZI4h20rSn2c5Ns-xF9UmKxsNjQBDhQKa2E-_1G-Lu-xWlqjf2KyQlyGfnRGDCLYDzQi5rNbIEK1zH00Kgk_7xhCyLLIJEmY0CbDc7_jge8Wmb6CNnmvfZOEhyk20ybkCp1bcCG0EdayP4AU7OqjcYYs9Nt8vjrYoC1e_R5zzgTy-yE9f_gayzo65vWyykheuQeViIgUVys9Ox2Gw9zZ_1mGm4uJLN4vI9iPDOQKkxHf4g"
+    auth = "BQA03p0Y1di8Ypwp5AWPC_2alzanfRfh3pA8_kFE0_BwEMxMIE39LA2QAZfRMSY2HmC-sHFJ2K87zxin2RstWmO_ayucYIBN6xuhqcHxKGVKFXEerAU_H9-utwmhkpyt2bV-SdClXJPmitVBis2Hb9_2qcTcEfkty6DOGDnqB9iP0m0lUEwE6ldDlpWVcHP__VXzlNwLx920Er1jadYMEOR4xRx15l_7eOYCvfdkMsz0JscS7DFpuH-wsS6QChVjRVqhu-mZxnjQjdn3fWugGeReZnVDLqcsyrsYLsV-hJ79fxyNNJK_8AAZUFqubK-kX21oHviiW6UIz33lCA"
     # for multiple people use
-    listofauths = [auth]
-    pm = playlistmaker(auth)
-
+    listofauths = [auth, "BQAweWnmAIFSs2ginmLuB-I02tH2ERGcxI_k9ZJG-wSLMjbhKdjCcdFgSCgcrCIVuAdD1yR_WPmWGuojtS0JkCvv9H62C6mRZh0wxZvCu8_JpdobgGYUfp06fSBblKoiay5yYIRpdtiZjfjZD9iZNB6wllD5Ws5xg-nLbtKqgJVWjjwq6o11Ju8x6xZDGSdnjPcFEGgTarT1jMeGTDVN90wFBL_PscI4rM5sOjcBMgV2WTfC2W4tdCkyAPc7HyOuwnj5Mo1NsF6ZyUtMkpq4jJhlR60pPP55ZPvCyBtZCKVzvTMHkz_irknYu2ZwpSNsQw"]
     # get genre types?
-    genres = ["r-n-b", "k-pop"]
+    genres = ["r-n-b", "k-pop", "pop"]
+
+    # main playlist
+    pm = playlistmaker(listofauths)
 
     # get tracks, limit is 50 for top and recently played tracks
     # also if we go beyond 100 Spotify kind of breaks
-    num_tracks = 15
-    tracks = pm.get_tracks(num_tracks)
+    # since we're getting both top played and recently played, divide by 2
+    num_tracks = int(50 / len(listofauths))
+   # tracks = pm.multiple_get_tracks(num_tracks)
+    tracks = pm.get_tracks_genre_filter(num_tracks, genres)
     # tracks = pm.get_tracks_genre_filter(num_tracks, genres)
+    playlist = pm.create_playlist("Asjdfiaopwejfp")
 
-    # get playlist name from user and create playlist
-    playlist = pm.create_playlist("Test")
-
-    # populate playlist with recommended tracks
     pm.populate_playlist(playlist, tracks)
+
+
     # get link to playlist
     link = pm.get_playlist_link()
     # local test
