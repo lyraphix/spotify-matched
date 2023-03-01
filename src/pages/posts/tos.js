@@ -34,21 +34,21 @@ export default function FirstPost() {
 
                 <h2>2. Use License</h2>
 
-                <p>Permission is granted to temporarily download one copy of the materials on Spotify Matched's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <p>Permission is granted to temporarily download one copy of the materials on Spotify Matched&apos;s Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
 
                 <ul>
                     <li>modify or copy the materials;</li>
                     <li>use the materials for any commercial purpose or for any public display;</li>
-                    <li>attempt to reverse engineer any software contained on Spotify Matched's Website;</li>
+                    <li>attempt to reverse engineer any software contained on Spotify Matched&apos;s Website;</li>
                     <li>remove any copyright or other proprietary notations from the materials; or</li>
-                    <li>transferring the materials to another person or "mirror" the materials on any other server.</li>
+                    <li>transferring the materials to another person or &quot;mirror&quot; the materials on any other server.</li>
                 </ul>
 
                 <p>This will let Spotify Matched to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the <a href="https://www.termsofservicegenerator.net">Terms Of Service Generator</a>.</p>
 
                 <h2>3. Disclaimer</h2>
 
-                <p>All the materials on Spotify Matched’s Website are provided "as is". Spotify Matched makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Spotify Matched does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
+                <p>All the materials on Spotify Matched&apos;s Website are provided &quot;as is&quot;. Spotify Matched makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Spotify Matched does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
 
                 <h2>4. Limitations</h2>
 
@@ -56,7 +56,7 @@ export default function FirstPost() {
 
                 <h2>5. Revisions and Errata</h2>
 
-                <p>The materials appearing on Spotify Matched’s Website may include technical, typographical, or photographic errors. Spotify Matched will not promise that any of the materials in this Website are accurate, complete, or current. Spotify Matched may change the materials contained on its Website at any time without notice. Spotify Matched does not make any commitment to update the materials.</p>
+                <p>The materials appearing on Spotify Matched&apos;s Website may include technical, typographical, or photographic errors. Spotify Matched will not promise that any of the materials in this Website are accurate, complete, or current. Spotify Matched may change the materials contained on its Website at any time without notice. Spotify Matched does not make any commitment to update the materials.</p>
 
                 <h2>6. Links</h2>
 
@@ -72,7 +72,7 @@ export default function FirstPost() {
 
                 <h2>9. Governing Law</h2>
 
-                <p>Any claim related to Spotify Matched's Website shall be governed by the laws of us without regards to its conflict of law provisions.</p>
+                <p>Any claim related to Spotify Matched&apos;s Website shall be governed by the laws of us without regards to its conflict of law provisions.</p>
                 </Grid>
           </Box>
           </Container>
