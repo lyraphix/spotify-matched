@@ -2,8 +2,8 @@
 Testing multiple playlist making class
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
-To do: separate by genre (with possibly more songs), if bitch lasagna is in the song list, remove it (easter egg)
-Updated: 2023/02/22 — HAHA COMBINING THINGS ACTUALLY WORKED
+To do: if bitch lasagna is in the song list, remove it (easter egg)
+Updated: 2023/02/28 — balancing; test genre filtering with multiple people
 """
 
 import json
@@ -18,11 +18,12 @@ class playlistmaker:
 
     def __init__(self, listofauths):
         """
-        :param authorization_token (str): Spotify API token
+        :param listofauths (lst): list of Spotify API tokens
         """
         self.authorizationToken = listofauths[0]
         self.tokenslist = listofauths
         self.playlistid = ""
+
 
     # function for getting multiple users and merging into a playlist
     def multiple_get_tracks(self, limit):
@@ -36,9 +37,6 @@ class playlistmaker:
             url = f"https://api.spotify.com/v1/me/top/tracks?limit={limit}"
             response = self._place_get_api_request(url, user)
             response_json = response.json()
-            json_object = json.dumps(response_json)
-            with open("test.json", "w") as outfile:
-                outfile.write(json_object)
             for track in response_json["items"]:
                 tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
 
@@ -58,49 +56,50 @@ class playlistmaker:
         :param requested_genres (list): list of requested genres user wants
         :return tracks (list of Track): List of last played tracks
         """
-        # get top tracks first
-        url = f"https://api.spotify.com/v1/me/top/tracks?limit={limit}"
-        response = self._place_get_api_request(url)
-        response_json = response.json()
-        # json testing for debugging purposes
-        # json_object = json.dumps(response_json)
-        # with open("test.json", "w") as outfile:
-        #     outfile.write(json_object)
-        # f = open('test.json')
-
-        # returns JSON object as
-        # a dictionary
-        # data = json.load(f)
-        #
-        # # Iterating through the json
-        # # list
-        # for i in data['items']:
-        #     print(i)
-        # # Closing file
-        # f.close()
         tracks = list()
-        # separate by genre
-        for track in response_json["items"]:
-            artist_id = track["artists"][0]["id"]
-            if self.match_artist_genre(artist_id, requested_genres):
-                tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
-
-        # reset the url to get recently played tracks
-        url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
-        response = self._place_get_api_request(url)
-        response_json = response.json()
-        for track in response_json["items"]:
-            artist_id = track["track"]["artists"][0]["id"]
-            if self.match_artist_genre(artist_id, requested_genres):
-                tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
-
-        # reset url again to get specific genre tracks of 2022 (Carrie's design)
-        for genre in requested_genres:
-            url = f"https://api.spotify.com/v1/search?type=track&q=year:2022%20genre:{genre}&limit=5"
-            response = self._place_get_api_request(url)
+        for user in self.tokenslist:
+            # get top tracks first
+            url = f"https://api.spotify.com/v1/me/top/tracks?limit={limit}"
+            response = self._place_get_api_request(url, user)
             response_json = response.json()
-            for track in response_json['tracks']['items']:
-                tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
+            # json testing for debugging purposes
+            # json_object = json.dumps(response_json)
+            # with open("test.json", "w") as outfile:
+            #     outfile.write(json_object)
+            # f = open('test.json')
+
+            # returns JSON object as
+            # a dictionary
+            # data = json.load(f)
+            #
+            # # Iterating through the json
+            # # list
+            # for i in data['items']:
+            #     print(i)
+            # # Closing file
+            # f.close()
+            # separate by genre
+            for track in response_json["items"]:
+                artist_id = track["artists"][0]["id"]
+                if self.match_artist_genre(artist_id, requested_genres, user):
+                    tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
+
+            # reset the url to get recently played tracks
+            url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
+            response = self._place_get_api_request(url, user)
+            response_json = response.json()
+            for track in response_json["items"]:
+                artist_id = track["track"]["artists"][0]["id"]
+                if self.match_artist_genre(artist_id, requested_genres, user):
+                    tracks.append(Track(track["track"]["name"], track["track"]["id"], track["track"]["artists"][0]["name"]))
+
+        # # reset url again to get specific genre tracks of 2022 (Carrie's design)
+        # for genre in requested_genres:
+        #     url = f"https://api.spotify.com/v1/search?type=track&q=year:2022%20genre:{genre}&limit=5"
+        #     response = self._place_get_api_request(url)
+        #     response_json = response.json()
+        #     for track in response_json['tracks']['items']:
+        #         tracks.append(Track(track["name"], track["id"], track["artists"][0]["name"]))
 
         # remove duplicates
         tracks = set(tracks)
@@ -117,7 +116,7 @@ class playlistmaker:
 
     # genre filter function
     # since apparently getting the track genre is broken
-    def match_artist_genre(self, artist, requested_genres):
+    def match_artist_genre(self, artist, requested_genres, userauth):
         """Gets artists' genres and sees if it matches with the requested genres
         :param artist: artist id
         :param requested_genres: list of requested genres
@@ -127,7 +126,7 @@ class playlistmaker:
         # track_id = "1fdlTXD7obDyqOpx96BEL9" — Maison
         # 5NK2NHvmKLOn8V3eBYDaKm July 7th
         url = f"https://api.spotify.com/v1/artists/{artist}"
-        response = self._place_get_api_request(url)
+        response = self._place_get_api_request(url, userauth)
         response_json = response.json()
         artist_genres = response_json["genres"]
         for artist_genre in artist_genres:
