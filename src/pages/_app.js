@@ -3,8 +3,14 @@ import { Inter } from '@next/font/google'
 import { createTheme, ThemeProvider } from '@mui/material';
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
+import { SessionProvider } from "next-auth/react";
+import { RecoilRoot } from "recoil";
 
-export default function App({ Component, pageProps }) {
+import "../styles/globals.css";
+
+
+
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
   // const inter = Inter({ subsets: ['latin'] })
   const theme = createTheme({
     palette: {
@@ -91,5 +97,23 @@ export default function App({ Component, pageProps }) {
     },
     
   });
-  return <ThemeProvider theme={theme}><Component {...pageProps} /></ThemeProvider>
+
+  return(
+  <ThemeProvider theme={theme}></ThemeProvider>,
+  <SessionProvider session={session}>
+    
+    <RecoilRoot>
+      <Component {...pageProps} />
+
+    </RecoilRoot>
+    
+  </SessionProvider>)
+
+
+
+
+
+  
+
 }
+

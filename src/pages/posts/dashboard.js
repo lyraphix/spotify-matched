@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState, Component } from "react";
 import { Inter, Open_Sans } from '@next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -10,17 +9,24 @@ import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
 import makeToolBar from "./reuseables"; //functions
 import { QuestionAnswer } from '@mui/icons-material';
+import { useSession } from "next-auth/react";
+import useSpotify from "../../../hooks/useSpotify";
+
+import Bouncygreeting from "../../../components/Bouncygreeting";
 
 const login = true;
 
 const inter = Inter({ subsets: ['latin'] })
 const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
 
+
+
 class BounceGreeting extends Component {
   render() {
+    
     const key = Math.random(); // generate a random key
     return (
-      <Bounce key={key}><Typography variant="h2Large">Hi, Y/N</Typography></Bounce>
+      <Bounce key={key}><Typography variant="h2Large">Hi, {session?.user?.username}</Typography></Bounce>
     );
   }
 }
@@ -29,10 +35,16 @@ class BounceGreeting extends Component {
 // import Link from 'next/link';
 
 export const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-export default function Dashboard() {
-  const avatar = ""
-  const username = ""
 
+export default function Dashboard() {
+  const { data: session, status } = useSession();
+  const avatar = ""
+  if (session){
+    const username = session.user.name;
+  }
+  else{
+    const username = "BLANK_USER";
+  }
   const user1 = "user"
   const user2 = "user"
   const user3 = "user"
@@ -83,7 +95,7 @@ export default function Dashboard() {
     <Container >
       <CssBaseline />
       render() {//clean
-        makeToolBar(username, avatar)}
+        makeToolBar(session?.user?.username, avatar)}
 
       <Box sx={{ // The Whole Page
         mt: 15,
@@ -98,7 +110,7 @@ export default function Dashboard() {
             direction: "row"
           }}>
           {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
-          <BounceGreeting />
+          <Bouncygreeting />
         </Box>
 
         <Box // Buttons
@@ -159,7 +171,7 @@ export default function Dashboard() {
                 variant="text"
                 size="medium"
                 sx={{ mt: 0.5, color: 'third.text', backgroundColor: "third.main", alignItems: "stretch" }}
-                href="/posts/vibe-picker"
+                href="/posts/jsontest"
               >
                 {//<Grid container direction= "column" sx={{mt:0, flexGrow:1, display: 'flex', alignItems: "stretch", direction: "column", justifyContent: "left", }}>
                 }
