@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[807],{1473:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/posts/reuseables",function(){return t(2234)}])},2234:function(n,u,t){"use strict";t.r(u),t(7294),u.default=function(n,u,t){}}},function(n){n.O(0,[774,888,179],function(){return n(n.s=1473)}),_N_E=n.O()}]);
