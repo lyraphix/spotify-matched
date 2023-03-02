@@ -23,9 +23,8 @@ def main():
     # also if we go beyond 100 Spotify kind of breaks
     # since we're getting both top played and recently played, divide by 2
     num_tracks = int(50 / len(listofauths))
-   # tracks = pm.multiple_get_tracks(num_tracks)
+    # tracks = pm.multiple_get_tracks(num_tracks)
     tracks = pm.get_tracks_genre_filter(num_tracks, genres)
-    # tracks = pm.get_tracks_genre_filter(num_tracks, genres)
     playlist = pm.create_playlist("Asjdfiaopwejfp")
 
     pm.populate_playlist(playlist, tracks)
