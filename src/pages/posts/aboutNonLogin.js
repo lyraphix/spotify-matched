@@ -1,29 +1,12 @@
 // Delete after integrated backend
 
 import React, { Component } from 'react';
-import { Inter, Open_Sans } from '@next/font/google'
-import { List, ListItem, CardMedia, Stack, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
-import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
+import { Stack, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Button } from "@mui/material/";
 
-import makeToolBar from "./reuseables";
 
-const inter = Inter({ subsets: ['latin'] })
-const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
 const login = false;
 
-class BounceAbout extends Component {
-  render() {
-    const key = Math.random(); // generate a random key
-    return (
-      <Bounce key={key}><Typography variant="h2Large"><b>About Us</b></Typography></Bounce>
-    );
-  }
-}
-
 const about = function (login) {
-
-
 
   return (
 
@@ -95,7 +78,7 @@ const about = function (login) {
               direction: "row"
             }}>
             {/* <Box sx ={{mt:10, ml:20, flexGrow:2}}></Box> */}
-            <BounceAbout />
+            <Typography variant="h2Large"><b>About Us</b></Typography>
 
           </Box>
           <Box // Smaller

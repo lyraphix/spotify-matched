@@ -1,16 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Inter, Open_Sans } from '@next/font/google'
-import SearchIcon from '@mui/icons-material/Search';
-import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { Autocomplete, Chip, Image, Paper, IconButton, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Divider, Drawer, Link, MenuItem, Menu, Avatar, AppBar, Toolbar, Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
+
+import { Container, CssBaseline, Typography, Box, Grid, TextField, FormControlLabel, Checkbox, ThemeProvider, Button } from "@mui/material/";
 
 import makeToolBar from "./reuseables"; //functions
-import { GroupAdd, QuestionAnswer } from '@mui/icons-material';
 
-const inter = Inter({ subsets: ['latin'] })
 
 
 // import { Formik, field, form} from 'formik'

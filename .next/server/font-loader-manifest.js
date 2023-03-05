@@ -1,4 +1,6 @@
 self.__FONT_LOADER_MANIFEST={
   "pages": {},
-  "app": {}
+  "app": {},
+  "appUsingSizeAdjust": false,
+  "pagesUsingSizeAdjust": false
 }

@@ -1,5 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/posts/profile": "pages/posts/profile.js",
+  "/posts/first-post": "pages/posts/first-post.js",
+  "/posts/dashboard": "pages/posts/dashboard.js"
 }

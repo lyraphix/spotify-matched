@@ -13,10 +13,6 @@ import { Stack, Divider, Link, Avatar, Container, CssBaseline, Typography, Box, 
 import SettingsIcon from '@mui/icons-material/Settings';
 
 import makeToolBar from "./reuseables";
-// import about from "./about";
-// import about from "./posts/about";
-
-
 
 const settingsSideBar = function (currentlocation) {
 
