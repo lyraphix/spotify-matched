@@ -9,11 +9,16 @@ from playlistMaker import playlistmaker
 # pretend password: hahanerd
 
 def main(oauth):
+    listofauths = list()
     auth = oauth
-    pm = playlistmaker(auth)
+    listofauths.append(auth)
 
-    # get tracks
-    num_tracks = 20
+    pm = playlistmaker(listofauths)
+
+    # get tracks, limit is 50 for top and recently played tracks
+    # also if we go beyond 100 Spotify kind of breaks
+    # since we're getting both top played and recently played, divide by 2
+    num_tracks = int(50 / len(listofauths))
     tracks = pm.get_tracks(num_tracks)
 
     # get playlist name from user and create playlist
