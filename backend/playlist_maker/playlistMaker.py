@@ -2,13 +2,12 @@
 Playlist making class
 Author: Ellie Paek
 Source (cloned and edited): https://github.com/musikalkemist/spotifyplaylistgenerator
-To do: separate by genre (with possibly more songs), if bitch lasagna is in the song list, remove it (easter egg)
-Updated: 2023/02/22 — HAHA COMBINING THINGS ACTUALLY WORKED
+To do: if bitch lasagna is in the song list, remove it (easter egg)
+Updated: 2023/03/09 — bro why is it recommending me so much Kehlani and latin pop (not that I'm complaining but—)
 """
 
 import json
 import requests
-import random
 
 from track import Track
 from playlist import Playlist
@@ -141,39 +140,32 @@ class playlistmaker:
         return False
 
     # WIP
-    # def get_track_recommendations(self, seed_tracks, requested_genres, limit=15):
-    #     """Get a list of recommended tracks starting from a number of seed tracks.
-    #     :param seed_tracks (list of Track): Reference tracks to get recommendations. Should be 5 or less.
-    #     :param limit (int): Number of recommended tracks to be returned
-    #     :return tracks (list of Track): List of recommended tracks
-    #     Grab three random genres (if more than three) and two seed tracks as base """
-    #     # get seed tracks first
-    #     seed_tracks_url = ""
-    #     for seed_track in seed_tracks:
-    #         seed_tracks_url += seed_track + ","
-    #     seed_tracks_url = seed_tracks_url[:-1]
-    #
-    #     seed_genres_url = ""
-    #     random_requested_genres = requested_genres
-    #     # if requested genres is over 3, find three random genres out of it
-    #     if (len(requested_genres) > 3):
-    #         random_requested_genres = []
-    #         for i in range(3):
-    #             random_requested_genres.append(random.choice(requested_genres))
-    #     for seed_genre in random_requested_genres:
-    #         seed_genres_url += seed_genre + ","
-    #     seed_genres_url = seed_genres_url[:-1]
-    #
-    #     url = f"https://api.spotify.com/v1/recommendations?limit={limit}&market=US&seed_genres={seed_genres_url}&seed_tracks={seed_tracks_url}"
-    #     response = self._place_get_api_request(url)
-    #     response_json = response.json()
-    #     tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for
-    #               track in response_json["tracks"]]
-    #     return tracks
+    def get_track_recommendations(self, seed_tracks, requested_genres, limit):
+        """Get a list of recommended tracks starting from a number of seed tracks.
+        :param seed_tracks (list of Track): Reference tracks to get recommendations. Should be 5 or less.
+        :param limit (int): Number of recommended tracks to be returned
+        :return tracks (list of Track): List of recommended tracks
+        Grab three random genres (if more than three) and two seed tracks as base """
+        # get seed tracks first
+        seed_tracks_url = ""
+        for seed_track in seed_tracks:
+            seed_tracks_url += seed_track + ","
+        seed_tracks_url = seed_tracks_url[:-1]
+
+        seed_genres_url = ""
+        for seed_genre in requested_genres:
+            seed_genres_url += seed_genre + ","
+        seed_genres_url = seed_genres_url[:-1]
+
+        url = f"https://api.spotify.com/v1/recommendations?limit={limit}&market=US&seed_genres={seed_genres_url}&seed_tracks={seed_tracks_url}"
+        response = self._place_get_api_request(url, self.authorizationToken)
+        response_json = response.json()
+        tracks = [Track(track["name"], track["id"], track["artists"][0]["name"]) for track in response_json["tracks"]]
+        return tracks
 
 
     # functions for creating a playlist
-    def create_playlist(self, name):
+    def create_playlist(self, name, description):
         """
         :param name (str): New playlist name
         :return playlist (Playlist): Newly created playlist
@@ -181,7 +173,7 @@ class playlistmaker:
         userid = self.get_user_id()
         data = json.dumps({
             "name": name,
-            "description": "Recommended songs by Spotify Matched c:",
+            "description": description,
             "collaborative": True,
             "public": False
         })

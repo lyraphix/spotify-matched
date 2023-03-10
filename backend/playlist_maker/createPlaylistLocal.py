@@ -5,16 +5,18 @@ Author: Ellie Paek
 """
 
 
-from multiplePlaylistMaker import playlistmaker
+from playlistMaker import playlistmaker
+import random
 
 def main():
 
     # replace auth with own authentication code (expires every hour)
-    auth = "BQA03p0Y1di8Ypwp5AWPC_2alzanfRfh3pA8_kFE0_BwEMxMIE39LA2QAZfRMSY2HmC-sHFJ2K87zxin2RstWmO_ayucYIBN6xuhqcHxKGVKFXEerAU_H9-utwmhkpyt2bV-SdClXJPmitVBis2Hb9_2qcTcEfkty6DOGDnqB9iP0m0lUEwE6ldDlpWVcHP__VXzlNwLx920Er1jadYMEOR4xRx15l_7eOYCvfdkMsz0JscS7DFpuH-wsS6QChVjRVqhu-mZxnjQjdn3fWugGeReZnVDLqcsyrsYLsV-hJ79fxyNNJK_8AAZUFqubK-kX21oHviiW6UIz33lCA"
+    auth = "BQCHoMlybIFQsNzSsh3SQ7cZYhdQi0K8syoPX6FCktxBdDkRv0Yfi6p1dGZR3XzMHlFVjjCg6mcoMoF70fDIfTEEy2T2p_xogjzdJNeD167_Yzp0a1fstC6igls5UHKFqPYV-KPfRLpk2482oVhWcRvpJfs5OJefrbAj8spV4UIuQWbIwwMxAo9Fj7gNz9ylrUzowniux8euD7LGNZ1dsHDDPzVaI5ph40yZWJcFPp9Rf4Z_B0_r8jS3Rzx1Zi_cIMAy8XShzeTIxtB5czf7OqFo9rQv7Dk7sfEOD6oCAA-HgOUnOtt6yvPpGrU80OgySI6LJ4eRyLQhsL3dEw"
     # for multiple people use
-    listofauths = [auth, "BQAweWnmAIFSs2ginmLuB-I02tH2ERGcxI_k9ZJG-wSLMjbhKdjCcdFgSCgcrCIVuAdD1yR_WPmWGuojtS0JkCvv9H62C6mRZh0wxZvCu8_JpdobgGYUfp06fSBblKoiay5yYIRpdtiZjfjZD9iZNB6wllD5Ws5xg-nLbtKqgJVWjjwq6o11Ju8x6xZDGSdnjPcFEGgTarT1jMeGTDVN90wFBL_PscI4rM5sOjcBMgV2WTfC2W4tdCkyAPc7HyOuwnj5Mo1NsF6ZyUtMkpq4jJhlR60pPP55ZPvCyBtZCKVzvTMHkz_irknYu2ZwpSNsQw"]
+    listofauths = [auth]
     # get genre types?
-    genres = ["r-n-b", "k-pop", "pop"]
+    genres = ["latin", "k-pop", "j-rock"]
+    # "r-n-b", "pop", "jazz", "classical", "alternative", "indie", "j-rock", "latin"
 
     # main playlist
     pm = playlistmaker(listofauths)
@@ -25,9 +27,42 @@ def main():
     num_tracks = int(50 / len(listofauths))
     # tracks = pm.multiple_get_tracks(num_tracks)
     tracks = pm.get_tracks_genre_filter(num_tracks, genres)
-    playlist = pm.create_playlist("Asjdfiaopwejfp")
-
+    title = "Yay Musaic"
+    description = "Recommended songs by Musaic heh c:"
+    playlist = pm.create_playlist(title, description)
     pm.populate_playlist(playlist, tracks)
+
+    # get recommended if not full
+    if len(tracks) < 100:
+        random.seed()
+        rec_track_num = 100 - len(tracks)
+        # check if songs actually found in library
+        seed_tracks = list()
+        if (len(tracks) != 0):
+            # check if there's one song
+            trackmax = 2
+            if (len(tracks) == 1):
+                trackmax = 1
+            tracks = list(tracks)
+            random.shuffle(tracks)
+            for counter in range(trackmax):
+                chosen_track = tracks[counter]
+                print(chosen_track.name)
+                seed_tracks.append(chosen_track.id)
+        # if requested genres is over 3, find three random genres out of it
+        random_requested_genres = genres
+        if (len(genres) > (5-len(seed_tracks))):
+            random_requested_genres = list()
+            random.shuffle(genres)
+            for i in range(5-len(seed_tracks)):
+                random_requested_genres.append(genres[i])
+        # test
+        for yay in random_requested_genres:
+            print(yay)
+        rec_tracks = pm.get_track_recommendations(seed_tracks, random_requested_genres, rec_track_num)
+
+        pm.populate_playlist(playlist, rec_tracks)
+
 
 
     # get link to playlist

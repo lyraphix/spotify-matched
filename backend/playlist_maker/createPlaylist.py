@@ -22,10 +22,12 @@ def main(oauth):
     tracks = pm.get_tracks(num_tracks)
 
     # get playlist name from user and create playlist
-    playlist = pm.create_playlist("Test")
-
-    # populate playlist with recommended tracks
+    title = "Yay Musaic"
+    description = "Recommended songs by Musaic heh c:"
+    playlist = pm.create_playlist(title, description)
+    # populate playlist with tracks
     pm.populate_playlist(playlist, tracks)
+
 
     # get link to playlist
     link = pm.get_playlist_link()
